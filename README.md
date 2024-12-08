@@ -7,3 +7,5 @@ from foundational database concepts to advanced features.
 ## What You'll Find Here:
 * Step-by-step SQL scripts for creating, managing, and optimizing databases.
 * Comprehensive notes on PostgreSQL features like schemas, data types, indexing, performance optimization, and security.
+
+- [Introduction to Databases and Why PostgreSQL Stands Out](introduction-to-databases.md)
