@@ -9,6 +9,8 @@ Databases are foundational to modern applications, enabling efficient data manag
 * `Hospital Management System:` Keeps track of patient records, doctor schedules, and billing details.
 * `Airline Reservation System:` Manages flight schedules, seat bookings, and passenger information.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/lMEn2ZkWNNY)](https://youtu.be/lMEn2ZkWNNY)
+
 ## Why Do We Need a Database?
 Databases are an essential component of modern computing. They solve a variety of challenges related to data storage, organization, and management. Here's why we need a database:
 
