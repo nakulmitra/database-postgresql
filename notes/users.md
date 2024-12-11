@@ -1,7 +1,7 @@
 # Managing Users in PostgreSQL: A Comprehensive Guide
 In PostgreSQL, user management is a critical aspect of database administration. It ensures secure and organized access to the database, enabling role-based permissions, auditing, and controlled collaboration among multiple users or applications. Here's a detailed guide on managing users in PostgreSQL.
 
-## Why Do We Create Users in a Database?
+## 1. Why Do We Create Users in a Database?
 ### Access Control
 * Users allow you to define who can access the database and its objects, such as tables, views, and schemas.
 * By assigning roles and privileges to users, you can restrict or grant access to specific resources.
@@ -46,7 +46,7 @@ In PostgreSQL, user management is a critical aspect of database administration. 
 `Example:`
 * A web application connects using a `web_app_user` with limited permissions to ensure database security.
 
-## Creating Users in PostgreSQL
+## 2. Creating Users in PostgreSQL
 Users in PostgreSQL are created using the `CREATE USER` command. A user represents an entity (person or application) that interacts with the database.
 
 ### Syntax:
@@ -61,7 +61,7 @@ CREATE USER new_user WITH PASSWORD 'secure_password';
 * `new_user:` The username of the account.
 * `'secure_password':` The password for the account.
 
-## Granting Privileges to Users
+## 3. Granting Privileges to Users
 Once a user is created, they need specific privileges to perform actions in the database.
 
 ### Granting Basic Access:
@@ -87,7 +87,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA your_schema TO new_
 REVOKE ALL PRIVILEGES ON SCHEMA your_schema FROM new_user;
 ```
 
-## Modifying User Details
+## 4. Modifying User Details
 PostgreSQL allows modifying user roles and credentials using the `ALTER USER` command.
 
 ### Changing a User's Password:
@@ -107,7 +107,7 @@ GRANT UPDATE ON ALL TABLES IN SCHEMA your_schema TO new_user;
 REVOKE INSERT ON ALL TABLES IN SCHEMA your_schema FROM new_user;
 ```
 
-## Deleting a User
+## 5. Deleting a User
 When a user is no longer required, you can safely delete the user account. However, PostgreSQL enforces that a user must not own any database objects before being dropped.
 
 ### Steps to Delete a User:
@@ -133,7 +133,7 @@ DROP OWNED BY devportal;
 DROP USER devportal;
 ```
 
-## Practical Examples
+## 6. Practical Examples
 * `Example 1:` Creating a New User and Granting Privileges
 ```
 CREATE USER analyst WITH PASSWORD 'analyst_pass';
@@ -155,7 +155,7 @@ DROP OWNED BY analyst;
 DROP USER analyst;
 ```
 
-## Best Practices for User Management
+## 7. Best Practices for User Management
 ### Use Role-Based Access Control (RBAC)
 * Group users with similar privileges into roles and assign roles to users.
 * `Example:`
