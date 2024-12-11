@@ -10,3 +10,4 @@ from foundational database concepts to advanced features.
 
 ## Notes 
 - [Introduction to Databases and Why PostgreSQL Stands Out](notes/introduction-to-databases.md)
+- [Managing Users in PostgreSQL](notes/users.md)
