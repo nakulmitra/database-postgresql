@@ -11,3 +11,16 @@ from foundational database concepts to advanced features.
 ## Notes 
 - [Introduction to Databases and Why PostgreSQL Stands Out](notes/introduction-to-databases.md)
 - [Managing Users in PostgreSQL](notes/users.md)
+
+## YouTube playlists
+* [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
+* [Object-Oriented Programming (OOP) in Java](https://www.youtube.com/playlist?list=PLKrxcqbQdCgbF2t_O8w2Kjx0R7qYTA2XB)
+* [Real-World Projects with OOP Concepts](https://www.youtube.com/playlist?list=PLKrxcqbQdCgaAtUObt11xA63eO7kx4Epj)
+
+## Stay Connected
+* [Dev Portal](https://www.youtube.com/@DevPortal2114)
+Subscribe for the latest Java tutorials.
+* [LinkedIn Profile](https://www.linkedin.com/in/nakul-mitra-microservices-spring-boot-java-postgresql/)
+Connect with me for more programming insights.
+
+Happy coding! If you found these resources helpful, please give this repo a star ⭐ and share it with others who are learning database.
