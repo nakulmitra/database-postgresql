@@ -1,6 +1,8 @@
 # Managing Users in PostgreSQL: A Comprehensive Guide
 In PostgreSQL, user management is a critical aspect of database administration. It ensures secure and organized access to the database, enabling role-based permissions, auditing, and controlled collaboration among multiple users or applications. Here's a detailed guide on managing users in PostgreSQL.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/lMEn2ZkWNNY)](https://youtu.be/9mdgPmHg-9s)
+
 ## 1. Why Do We Create Users in a Database?
 ### Access Control
 * Users allow you to define who can access the database and its objects, such as tables, views, and schemas.
