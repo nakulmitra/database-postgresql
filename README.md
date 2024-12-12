@@ -19,7 +19,7 @@ from foundational database concepts to advanced features.
 
 ## Stay Connected
 * [Dev Portal](https://www.youtube.com/@DevPortal2114)
-Subscribe for the latest Java tutorials.
+Subscribe for the latest Database tutorials.
 * [LinkedIn Profile](https://www.linkedin.com/in/nakul-mitra-microservices-spring-boot-java-postgresql/)
 Connect with me for more programming insights.
 
