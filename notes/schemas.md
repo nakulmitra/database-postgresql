@@ -6,20 +6,18 @@ A schema in PostgreSQL is a logical container for organizing database objects. I
 
 For example, a database for a **library system** might use separate schemas for **books**, **members**, and **staff**. This organization helps avoid naming conflicts and improves clarity.
 * **Default Schema:** PostgreSQL comes with a built-in schema called `public`. If no schema is specified when creating a database object, it is placed in the `public` schema.
-* **Schemas as Namespaces:** Schemas allow you to define multiple objects with the same name as long as they belong to different schemas. For example:
-* `books.inventory`
-* `members.inventory`
+* **Schemas as Namespaces:** Schemas allow us to define multiple objects with the same name as long as they belong to different schemas. For example: `books.inventory` & `members.inventory`
 
 ## 2. Benefits of Using Schemas in PostgreSQL
 Schemas offer several advantages that improve database organization and scalability:
 ### 2.1 Organization
-* Schemas allow you to group related objects logically, reducing database complexity.
-* For example, in a multi-module application, you can have separate schemas for different components:
+* Schemas allow us to group related objects logically, reducing database complexity.
+* For example, in a multi-module application, we can have separate schemas for different components:
 1. `sales` schema for sales-related tables like `orders` and `customers`.
 2. `inventory` schema for stock-related tables like `products` and `warehouses`.
 
 ### 2.2 Security
-* You can define fine-grained access controls at the schema level, ensuring that only authorized users can access specific objects.
+* We can define fine-grained access controls at the schema level, ensuring that only authorized users can access specific objects.
 * For instance:
 1. Grant read-only access to analysts for the `reports` schema.
 2. Allow developers full access to the `development` schema.
@@ -30,11 +28,10 @@ Schemas offer several advantages that improve database organization and scalabil
 
 ### 2.4 Conflict Avoidance
 * Schemas help prevent naming conflicts in databases with multiple objects.
-* For example:
-1. You can have `finance.transactions` and `retail.transactions` in the same database without conflicts.
+* For example: We can have `finance.transactions` and `retail.transactions` in the same database without conflicts.
 ### 2.5 Multi-Tenant Systems
 * In multi-tenant systems, schemas allow each client or tenant to have their own isolated data while sharing the same database.
-1. Example: Tenant A’s data resides in `tenant_a.orders`, while Tenant B’s data resides in `tenant_b.orders`.
+* Example: Tenant A’s data resides in `tenant_a.orders`, while Tenant B’s data resides in `tenant_b.orders`.
 
 ## 3. Working with Schemas in PostgreSQL
 ### 3.1 Creating a Schema
@@ -45,14 +42,14 @@ CREATE SCHEMA library_schema;
 This creates a schema named `library_schema`. By default, the user who creates the schema is the owner and has full control over it.
 
 ### 3.2 Setting a Default Schema
-To avoid specifying schema names in every query, you can set a default schema using the `search_path`:
+To avoid specifying schema names in every query, we can set a default schema using the `search_path`:
 ```
 SET search_path TO library_schema, public;
 ```
 This prioritizes `library_schema` for all queries unless another schema is explicitly mentioned.
 
 ### 3.3 Creating Objects in a Schema
-You can create objects like tables, views, or functions within a specific schema:
+We can create objects like tables, views, or functions within a specific schema:
 ```
 CREATE TABLE library_schema.books (
     id SERIAL PRIMARY KEY,
@@ -63,7 +60,7 @@ CREATE TABLE library_schema.books (
 Here, the `books` table is created inside the `library_schema` schema.
 
 ### 3.4 Renaming or Changing Ownership
-You can rename a schema or transfer its ownership to another user:
+We can rename a schema or transfer its ownership to another user:
 ```
 -- Rename a schema
 ALTER SCHEMA library_schema RENAME TO books_schema;
@@ -107,7 +104,7 @@ SET search_path TO finance, public;
 ```
 
 ### 5. Practical Example: Organizing a Library System
-Here’s how you can use schemas to organize a library database:
+Here’s how we can use schemas to organize a library database:
 ### Step 1: Create Schemas
 ```
 CREATE SCHEMA books;
