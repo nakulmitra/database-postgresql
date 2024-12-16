@@ -1,6 +1,8 @@
 # Managing Schemas in PostgreSQL
 In PostgreSQL, schemas play a cricual role in organizing and managing database objects like tables, views, sequences, and functions. Think of schemas as logical containers or namespaces that group database objects for better structure, organization, and security. 
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/cfEPGOry4fo)](https://youtu.be/cfEPGOry4fo)
+
 ## 1. What is a Schema in PostgreSQL?
 A schema in PostgreSQL is a logical container for organizing database objects. It acts as a namespace to ensure that objects (e.g., tables, views) with the same name can coexist within the same database, but in different schemas.
 
