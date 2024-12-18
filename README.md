@@ -12,6 +12,7 @@ from foundational database concepts to advanced features.
 - [Introduction to Databases and Why PostgreSQL Stands Out](notes/introduction-to-databases.md)
 - [Managing Users in PostgreSQL](notes/users.md)
 - [Managing Schemas in PostgreSQL](notes/schemas.md)
+- [PostgreSQL Data Types](notes/data-types.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
