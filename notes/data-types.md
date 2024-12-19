@@ -1,6 +1,8 @@
 # PostgreSQL Data Types
 Understanding data types is a fundamental aspect of working with databases. In PostgreSQL, data types determine how data is stored, retrieved, and processed. Proper selection of data types ensures **data accuracy**, **storage efficiency**, and **optimal performance**. Below is a detailed guide to PostgreSQL data types, their categories, use cases, and performance considerations.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/kCK6VD1rzT0)](https://youtu.be/kCK6VD1rzT0)
+
 ## 1. Why Are Data Types Important?
 Data types define the kind of data a column can hold. They ensure the correctness and efficiency of the database. Key reasons why data types are critical include:
 * `Data Accuracy:` Prevents invalid data entry by enforcing rules. For instance, a numeric field won’t allow text values.
