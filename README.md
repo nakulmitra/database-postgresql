@@ -13,6 +13,7 @@ from foundational database concepts to advanced features.
 - [Managing Users in PostgreSQL](notes/users.md)
 - [Managing Schemas in PostgreSQL](notes/schemas.md)
 - [PostgreSQL Data Types](notes/data-types.md)
+- [Creating and Managing Tables in PostgreSQL](notes/tables.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
