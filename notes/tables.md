@@ -34,22 +34,22 @@ CREATE TABLE employees (
 ```
 
 ### Explanation of Columns:
-#### emp_id SERIAL PRIMARY KEY:
+#### 1. emp_id SERIAL PRIMARY KEY:
 * `SERIAL:` Auto-generates a unique integer value for each row.
 * `PRIMARY KEY:` Ensures that `emp_id` is unique and not null.
 
-#### first_name VARCHAR(50) NOT NULL:
+#### 2. first_name VARCHAR(50) NOT NULL:
 * `VARCHAR(50):` Stores up to 50 characters.
 * `NOT NULL:` Ensures the column cannot have null values.
 
-#### email VARCHAR(100) UNIQUE NOT NULL:
+#### 3. email VARCHAR(100) UNIQUE NOT NULL:
 * `UNIQUE:` Ensures no two rows have the same email value.
 * `NOT NULL:` Guarantees an email value is provided for every employee.
 
-#### hire_date DATE DEFAULT CURRENT_DATE:
+#### 4. hire_date DATE DEFAULT CURRENT_DATE:
 * `DEFAULT CURRENT_DATE:` Automatically sets the hire date to the current date if no value is provided.
 
-#### salary NUMERIC(10, 2) CHECK (salary > 0):
+#### 5. salary NUMERIC(10, 2) CHECK (salary > 0):
 * `NUMERIC(10, 2):` Stores up to 10 digits, with 2 digits after the decimal point.
 * `CHECK (salary > 0):` Validates that the salary is always a positive value.
 
@@ -136,7 +136,7 @@ Let’s see how to perform basic CRUD (Create, Read, Update, Delete) operations 
 INSERT INTO employees (first_name, last_name, email, hire_date, salary) 
 VALUES 
 ('Aman', 'Tiwari', 'aman@gmail.com', '2024-01-15', 55000.00),
-('Jane', 'Kute', 'hk@gmail.com', DEFAULT, 45000.00);
+('Harshada', 'Kute', 'hk@gmail.com', DEFAULT, 45000.00);
 ```
 
 ```
