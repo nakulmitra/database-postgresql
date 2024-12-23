@@ -1,6 +1,8 @@
 # Creating and Managing Tables in PostgreSQL
 Tables are the fundamental building blocks of any relational database, including PostgreSQL. They allow you to store, organize, and retrieve structured data efficiently. This guide explains the basics of creating, modifying, and managing tables in PostgreSQL, along with the use of constraints to enforce data integrity.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/vDAO_qISxT4)](https://youtu.be/vDAO_qISxT4)
+
 ## What is a Table in PostgreSQL?
 A table in PostgreSQL is a structured collection of rows and columns used to store data. Each column in a table has a specific **data type**, which determines the kind of data it can hold, such as integers, text, or dates. Tables can also have constraints applied to their columns, ensuring the integrity and validity of the data.
 
