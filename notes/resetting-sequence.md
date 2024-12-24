@@ -39,6 +39,7 @@ FROM information_schema.columns
 WHERE table_name = 'employees' AND column_name = 'emp_id';
 ```
 Output: `nextval('employees_emp_id_seq'::regclass)`
+
 This confirms that `employees_emp_id_seq` is the sequence for the `emp_id` column.
 
 ### Step 2: Check the Current Sequence Value
