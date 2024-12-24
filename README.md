@@ -14,6 +14,7 @@ from foundational database concepts to advanced features.
 - [Managing Schemas in PostgreSQL](notes/schemas.md)
 - [PostgreSQL Data Types](notes/data-types.md)
 - [Creating and Managing Tables in PostgreSQL](notes/tables.md)
+- [Resetting a Sequence in PostgreSQL to Prevent Insert Failures](notes/resetting-sequence.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
