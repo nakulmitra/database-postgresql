@@ -1,6 +1,8 @@
 # Resetting a Sequence in PostgreSQL to Prevent Insert Failures
 When working with PostgreSQL, sequences play a critical role in auto-incrementing values, particularly for primary keys. However, sequences can become out of sync with the data in a table due to manual inserts, data imports, or deletions. This guide explains sequences, why they get misaligned, and how to reset them to ensure smooth insert operations.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/gwU9NQttUZ8)](https://youtu.be/gwU9NQttUZ8)
+
 ## What is a Sequence in PostgreSQL?
 A sequence in PostgreSQL is a special database object designed to generate unique numeric values. It’s commonly used for auto-incrementing primary key columns.
 
