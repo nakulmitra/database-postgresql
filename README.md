@@ -15,6 +15,10 @@ from foundational database concepts to advanced features.
 - [PostgreSQL Data Types](notes/data-types.md)
 - [Creating and Managing Tables in PostgreSQL](notes/tables.md)
 - [Resetting a Sequence in PostgreSQL to Prevent Insert Failures](notes/resetting-sequence.md)
+- [SQL Basics with PostgreSQL](notes/crud.md)
+- [Filtering Data in SQL using WHERE, ORDER BY, and GROUP BY](notes/filtering.md)
+- [Understanding WHERE and HAVING Clauses in SQL](notes/where-vs-having.md)
+- [Aggregate Functions in SQL](notes/aggregate-functions.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
