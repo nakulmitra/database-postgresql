@@ -1,6 +1,8 @@
 # SQL Basics with PostgreSQL
 This document explores the fundamental CRUD operations in SQL, specifically tailored for PostgreSQL. CRUD stands for **Create**, **Read**, **Update**, and **Delete**, which are the basic operations to manage data in a database. These operations are the building blocks of any database system, allowing users to store, retrieve, modify, and delete data efficiently.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/4Coyz00SINg)](https://youtu.be/4Coyz00SINg)
+
 ## 1. What is CRUD?
 CRUD is an acronym for the four primary operations performed on a database table:
 * `Create:` Add new records to a table using the `INSERT` statement.
