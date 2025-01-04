@@ -117,7 +117,7 @@ HAVING AVG(grade) > 80;
 * The `GROUP BY` clause is used for aggregating data into meaningful groups.
 * The `HAVING` clause filters aggregated results (similar to WHERE for rows).
 
-## 5. 5. Combining WHERE, ORDER BY, and GROUP BY
+## 5. Combining WHERE, ORDER BY, and GROUP BY
 SQL queries often combine these clauses for more complex operations.
 ### Example:
 Retrieve the average grade for age groups where the grades are above 75, and sort the results by average grade in descending order

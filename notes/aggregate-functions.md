@@ -28,7 +28,14 @@ Common Aggregate Functions in SQL
 These functions are often combined with clauses like `GROUP BY` and `HAVING` to filter or organize results.
 
 ### Example Dataset
-Let's use a hypothetical sales table for demonstration.
+Let's use a hypothetical `sales` table for demonstration.
+| id | product | quantity | price |
+|----|---------|----------|-------|
+| 1  | Laptop  |    2	  |700.00 |
+| 2	 | Smartphone |	5	 | 300.00 |
+| 3	 | Laptop  | 1	 | 700.00 |
+| 4	 | Headphones | 3  | 50.00 |
+| 5	 | Smartphone | 2  | 300.00 |
 
 ## Practical Examples of Aggregate Functions
 ### 1. Calculating Total Sales (SUM)
