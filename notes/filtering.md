@@ -1,6 +1,8 @@
 # Filtering Data in SQL using WHERE, ORDER BY, and GROUP BY
 In SQL, filtering and organizing data are essential operations that allow users to retrieve meaningful information from databases. This guide covers three crucial SQL clauses - `WHERE`, `ORDER BY`, and `GROUP BY` with explanations, examples, and practical tips.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/dWcsuQcab7s)](https://youtu.be/dWcsuQcab7s)
+
 ## 1. Filtering Data: Why It’s Important
 When working with databases, we often deal with large datasets. However, not all data is relevant for every query. Filtering helps us focus on specific subsets of data, ensuring efficient and meaningful data retrieval.
 
