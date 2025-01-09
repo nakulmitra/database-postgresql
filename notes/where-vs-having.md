@@ -1,6 +1,8 @@
 # Understanding WHERE and HAVING Clauses in SQL
 The **WHERE** and **HAVING** clauses are essential components of SQL, used to filter data in different stages of query execution. Understanding the difference between the two is crucial for writing efficient and accurate SQL queries. Below is a comprehensive explanation of both clauses with examples, key differences, and common mistakes.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/IlSOpQycJmo)](https://youtu.be/IlSOpQycJmo)
+
 ## 1. Overview of WHERE and HAVING Clauses
 * `WHERE Clause:` The **WHERE** clause is used to filter rows before any grouping or aggregation is performed. It applies conditions directly to individual rows of data in a table.
 
