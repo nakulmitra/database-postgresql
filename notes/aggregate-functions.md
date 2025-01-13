@@ -1,6 +1,8 @@
 # Aggregate Functions in SQL
 Aggregate functions are essential SQL tools that allow you to perform calculations on multiple rows of data, returning a single, summarized value. They play a vital role in data analysis, reporting, and crafting insights from your databases. Below is a detailed breakdown of aggregate functions, their use cases, syntax, examples, and best practices for using them in SQL.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/sZJnRyAo_dQ)](https://youtu.be/sZJnRyAo_dQ)
+
 ## What Are Aggregate Functions?
 Aggregate functions perform calculations on a set of rows and return a single value, helping to summarize large datasets. They are commonly used in reports, dashboards, and data analysis to derive meaningful insights.
 
