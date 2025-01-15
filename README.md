@@ -19,6 +19,7 @@ from foundational database concepts to advanced features.
 - [Filtering Data in SQL using WHERE, ORDER BY, and GROUP BY](notes/filtering.md)
 - [Understanding WHERE and HAVING Clauses in SQL](notes/where-vs-having.md)
 - [Aggregate Functions in SQL](notes/aggregate-functions.md)
+- [Using CASE Statements in SQL](notes/case.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
