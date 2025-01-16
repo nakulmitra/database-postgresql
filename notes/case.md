@@ -1,6 +1,8 @@
 # Introduction to CASE Statements in SQL  
 The CASE statement in SQL is a powerful tool that allows you to add conditional logic directly into your queries. It works like an if-else or switch-case structure in programming languages, enabling you to perform conditional evaluations and return specific results based on defined conditions. This functionality is crucial for dynamic query customization, data categorization, and conditional formatting.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/lMEn2ZkWNNY)](https://youtu.be/5M8SoHw10Fk)
+
 ## 1. Syntax of CASE Statement  
 The basic syntax of the CASE statement is:  
 
