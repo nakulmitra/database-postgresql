@@ -20,6 +20,7 @@ from foundational database concepts to advanced features.
 - [Understanding WHERE and HAVING Clauses in SQL](notes/where-vs-having.md)
 - [Aggregate Functions in SQL](notes/aggregate-functions.md)
 - [Using CASE Statements in SQL](notes/case.md)
+- [INNER JOIN in SQL](notes/inner-join.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
