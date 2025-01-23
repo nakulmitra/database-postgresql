@@ -63,8 +63,8 @@ ON employees.dept_id = departments.dept_id;
 | 2      | Shreya      | Sales     |
 
 ### Why This Output?
-- **Aman**: Her `dept_id` (101) matches the `dept_id` in the `departments` table.
-- **Shreya**: His `dept_id` (102) also has a match.
+- **Aman**: His `dept_id` (101) matches the `dept_id` in the `departments` table.
+- **Shreya**: Her `dept_id` (102) also has a match.
 - **Janet and Harshada**: They are excluded because their `dept_id` values either don't match or are `NULL`.
 
 ## 5. Visual Representation of INNER JOIN
