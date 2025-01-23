@@ -1,6 +1,8 @@
 ## Understanding INNER JOIN in SQL
 An **INNER JOIN** is one of the most commonly used types of JOINs in SQL. It allows you to retrieve rows from two or more tables where a specified condition is met. INNER JOIN is essential for combining data from relational tables and is widely used in data analysis, reporting, and database management.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/WQW_bGatSzg)](https://youtu.be/WQW_bGatSzg)
+
 ## 1. What Is an INNER JOIN?
 An **INNER JOIN** returns rows from multiple tables where the join condition is satisfied. Rows that do not meet the condition are excluded from the result set. This type of JOIN is commonly used when you need to extract related data from multiple tables in a relational database.
 
