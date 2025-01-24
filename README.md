@@ -21,6 +21,7 @@ from foundational database concepts to advanced features.
 - [Aggregate Functions in SQL](notes/aggregate-functions.md)
 - [Using CASE Statements in SQL](notes/case.md)
 - [INNER JOIN in SQL](notes/inner-join.md)
+- [LEFT JOIN in SQL](notes/left-join.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
