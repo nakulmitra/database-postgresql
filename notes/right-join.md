@@ -17,17 +17,18 @@ ON table1.common_column = table2.common_column;
 - **ON table1.common_column = table2.common_column**: Defines the condition for the join, specifying how the tables are related (typically through a common column).
 
 ## How RIGHT JOIN Works
-- **RIGHT JOIN** ensures that every row from the **right table** appears in the result set. If a matching row exists in the **left table**, the corresponding data from both tables is shown. If there’s no match, the columns from the left table will contain **NULL** values.
+- **RIGHT JOIN** ensures that every row from the **right table** appears in the result set. If a matching row exists in the **left table**, the corresponding data from both tables is shown. If there's no match, the columns from the left table will contain **NULL** values.
 - The main idea is that the **right table** is given priority, so even if there's no match for a row from the left table, that row from the right table will still be included in the output.
 
 ### **Example**
 Consider the following two tables:
 1. **employees**
+
 | emp_id | emp_name | dept_id |
 |--------|----------|---------|
-| 1      | Alice    | 101     |
-| 2      | Bob      | 102     |
-| 3      | Charlie  | 103     |
+| 1      | Aman    | 101     |
+| 2      | Shreya      | 102     |
+| 3      | Janet  | 103     |
 
 2. **departments**
 
@@ -51,7 +52,7 @@ ON employees.dept_id = departments.dept_id;
 | emp_id | emp_name | dept_name |
 |--------|----------|-----------|
 | 1      | Alice    | HR        |
-| 2      | Bob      | Sales     |
+| 2      | Shreya      | Sales     |
 | NULL   | NULL     | IT        |
 
 ### Explanation:
@@ -73,6 +74,6 @@ In real-world applications, you might use RIGHT JOIN when you want to retrieve d
 ## Summary
 - **RIGHT JOIN** returns all rows from the **right table** and matching rows from the **left table**. If there's no match, NULL values are filled in for columns from the left table.
 - It's commonly used when you want to ensure the **right table**'s data is fully represented in your result set.
-- It’s the reverse of **LEFT JOIN**, which prioritizes the left table.
+- It's the reverse of **LEFT JOIN**, which prioritizes the left table.
 
 By understanding and applying **RIGHT JOIN**, you can handle various scenarios where you need to combine data from multiple tables with specific priorities.
