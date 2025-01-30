@@ -4,7 +4,7 @@ When working with PostgreSQL, sequences play a critical role in auto-incrementin
 [![](https://markdown-videos-api.jorgenkh.no/youtube/gwU9NQttUZ8)](https://youtu.be/gwU9NQttUZ8)
 
 ## What is a Sequence in PostgreSQL?
-A sequence in PostgreSQL is a special database object designed to generate unique numeric values. It’s commonly used for auto-incrementing primary key columns.
+A sequence in PostgreSQL is a special database object designed to generate unique numeric values. It's commonly used for auto-incrementing primary key columns.
 
 When a column is defined as `SERIAL` or `BIGSERIAL`, PostgreSQL automatically creates a sequence and associates it with that column. Each time a new row is inserted into the table, the sequence generates a unique value for the column.
 
@@ -118,7 +118,7 @@ Resetting a sequence is necessary when:
 * `Manual Inserts:` Rows are added with specific IDs instead of relying on the sequence.
 * `Data Imports:` Data is restored from a backup or imported manually without adjusting the sequence.
 * `Row Deletions:` Rows are deleted, creating gaps in the sequence.
-* `Sequence Misalignment:` The sequence’s current value does not match the table’s data.
+* `Sequence Misalignment:` The sequence's current value does not match the table's data.
 
 ## Best Practices
 * `Avoid Manual Inserts:` Always let PostgreSQL manage auto-incrementing columns using sequences.

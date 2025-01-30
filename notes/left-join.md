@@ -1,6 +1,8 @@
 # Understanding LEFT JOIN in SQL
 The `LEFT JOIN` is one of the fundamental SQL join operations that combines rows from two tables based on a related column. It ensures that all rows from the **left table** (the first table in the query) are included in the result set, even if there’s no matching row in the **right table**. If no match is found in the right table, the columns from the right table are filled with `NULL` values.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/za4XygGkw-s)](https://youtu.be/za4XygGkw-s)
+
 ## Key Concepts of LEFT JOIN
 
 ### 1. Basic Syntax
