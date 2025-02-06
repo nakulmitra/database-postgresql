@@ -3,6 +3,8 @@ In SQL, **RIGHT JOIN** (also known as **RIGHT OUTER JOIN**) is used to combine r
 
 The **RIGHT JOIN** operation ensures that all records from the **right table** are returned, regardless of whether a match exists in the **left table**.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/C_7HCJJ51Xw)](https://youtu.be/C_7HCJJ51Xw)
+
 ## Basic Syntax of RIGHT JOIN
 ```
 SELECT column1, column2, ...
