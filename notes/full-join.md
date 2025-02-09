@@ -62,9 +62,9 @@ A **FULL JOIN** returns all records from both tables:
 ## Comparison with Other Joins
 | JOIN Type    | Result |
 |-------------|--------|
-| INNER JOIN  | Returns only matching rows. |
-| LEFT JOIN   | Returns all rows from the left table and matching rows from the right. Unmatched rows from the right table return `NULL`. |
-| RIGHT JOIN  | Returns all rows from the right table and matching rows from the left. Unmatched rows from the left table return `NULL`. |
+| **INNER JOIN**  | Returns only matching rows. |
+| **LEFT JOIN**   | Returns all rows from the left table and matching rows from the right. Unmatched rows from the right table return `NULL`. |
+| **RIGHT JOIN**  | Returns all rows from the right table and matching rows from the left. Unmatched rows from the left table return `NULL`. |
 | **FULL JOIN** | Returns all rows from both tables, with `NULL` for unmatched rows. |
 
 ## When to Use FULL JOIN?
@@ -98,8 +98,6 @@ ON employees.dept_id = departments.dept_id;
 | 3           | Janet   | No Department  |
 | 4           | Harshada     | No Department  |
 | No Employee | No Name   | IT             |
-
----
 
 ## Performance Considerations
 `FULL JOIN` can be slow on **large datasets** because:
