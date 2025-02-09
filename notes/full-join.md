@@ -1,7 +1,7 @@
 # Understanding FULL JOIN in SQL
 SQL `FULL JOIN` (also known as **FULL OUTER JOIN**) is used to retrieve all records from both tables, whether there is a match or not. If a record has no match in one of the tables, `NULL` values are returned for the missing columns.
 
-FULL JOIN is particularly useful when you want to retain all data from both tables while merging related records based on a common column.
+FULL JOIN is particularly useful when we want to retain all data from both tables while merging related records based on a common column.
 
 ## Syntax of FULL JOIN
 ```
@@ -69,13 +69,13 @@ A **FULL JOIN** returns all records from both tables:
 
 ## When to Use FULL JOIN?
 Use `FULL JOIN` when:
-- You need to retrieve **all data from two related tables**, even if there are no exact matches.
-- You want to analyze missing relationships between two datasets.
-- You want to combine **LEFT JOIN** and **RIGHT JOIN** behavior in one query.
+- We need to retrieve **all data from two related tables**, even if there are no exact matches.
+- We want to analyze missing relationships between two datasets.
+- We want to combine **LEFT JOIN** and **RIGHT JOIN** behavior in one query.
 
 Avoid `FULL JOIN` if:
-- You only need matching rows (**INNER JOIN** is better).
-- You need all rows from just one table (**LEFT JOIN** or **RIGHT JOIN** is more efficient).
+- We only need matching rows (**INNER JOIN** is better).
+- We need all rows from just one table (**LEFT JOIN** or **RIGHT JOIN** is more efficient).
 
 ## Handling NULL Values in FULL JOIN
 Since `FULL JOIN` can return `NULL` values for unmatched records, we can use **COALESCE()** to replace NULLs with default values.
@@ -108,12 +108,12 @@ ON employees.dept_id = departments.dept_id;
 - Indexing **common columns** can **improve performance**.
 
 **Alternative Approaches:**
-- If you don't need unmatched rows from **both** tables, consider `LEFT JOIN` or `RIGHT JOIN`.
-- If you need **only matching rows**, use `INNER JOIN`.
+- If we don't need unmatched rows from **both** tables, consider `LEFT JOIN` or `RIGHT JOIN`.
+- If we need **only matching rows**, use `INNER JOIN`.
 
 ## Common Errors & Solutions
 ### 1. FULL JOIN Not Supported in MySQL
-MySQL **does not support FULL JOIN** directly. Instead, you can use `UNION` of `LEFT JOIN` and `RIGHT JOIN`:
+MySQL **does not support FULL JOIN** directly. Instead, we can use `UNION` of `LEFT JOIN` and `RIGHT JOIN`:
 
 ```
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
