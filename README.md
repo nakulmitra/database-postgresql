@@ -23,6 +23,7 @@ from foundational database concepts to advanced features.
 - [INNER JOIN in SQL](notes/inner-join.md)
 - [LEFT JOIN in SQL](notes/left-join.md)
 - [RIGHT JOIN in SQL](notes/right-join.md)
+- [FULL JOIN in SQL](notes/full-join.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
