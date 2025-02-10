@@ -3,6 +3,8 @@ SQL `FULL JOIN` (also known as **FULL OUTER JOIN**) is used to retrieve all reco
 
 FULL JOIN is particularly useful when we want to retain all data from both tables while merging related records based on a common column.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/UiGIHmY65tM)](https://youtu.be/UiGIHmY65tM)
+
 ## Syntax of FULL JOIN
 ```
 SELECT column1, column2, ...
