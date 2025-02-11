@@ -15,7 +15,6 @@ Stored procedures are useful because they:
 |----------------------|----------------|----------|
 | **Return Value**     | Does not return any value | Returns a value (scalar, table, or composite type) |
 | **Transaction Control** | Can use `BEGIN`, `COMMIT`, `ROLLBACK` | Cannot manage transactions |
-| **Multiple Statements** | Can execute multiple SQL statements | Executes a single SQL expression |
 | **Use Case**        | Best for data manipulation (`INSERT`, `UPDATE`, `DELETE`) | Best for computations and returning results |
 
 ## 3. Creating a Simple Stored Procedure in PostgreSQL
@@ -58,7 +57,7 @@ BEGIN
         UPDATE employees
         SET salary = salary + (salary * percent_increase / 100);
 
-        -- Condition to check if the percentage increase is too high
+        -- Condition check if the percentage increase is too high
         IF percent_increase > 20 THEN
             ROLLBACK;  -- Undo the update operation
             RAISE NOTICE 'Transaction rolled back: Too high a percentage!';
@@ -80,11 +79,22 @@ $$;
 ## 6. Modifying and Dropping Stored Procedures
 
 ### 6.1 Modifying a Procedure
-Stored procedures cannot be modified directly; they must be **dropped and recreated**.
+Stored procedures can be modified by **dropped and recreated**.
 ```
 DROP PROCEDURE update_salaries;
 
 CREATE PROCEDURE update_salaries(IN percent_increase NUMERIC)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    -- Updated logic here
+END;
+$$;
+```
+
+Use **CREATE OR REPLACE**
+```
+CREATE OR REPLACE PROCEDURE update_salaries(IN percent_increase NUMERIC)
 LANGUAGE plpgsql
 AS $$
 BEGIN
