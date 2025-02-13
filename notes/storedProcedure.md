@@ -1,6 +1,8 @@
 # Understanding Stored Procedures in PostgreSQL
 A **Stored Procedure** in PostgreSQL is a reusable set of SQL statements that are stored in the database and executed as a unit. Unlike functions, stored procedures **do not return values** but can execute **multiple SQL statements** together, including **transaction control statements** like `COMMIT` and `ROLLBACK`.  
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/OqrwTHCFItA)](https://youtu.be/OqrwTHCFItA)
+
 ### 1.1 Why Use Stored Procedures?
 Stored procedures are useful because they:  
 * Automate complex database operations  
