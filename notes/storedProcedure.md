@@ -3,7 +3,7 @@ A **Stored Procedure** in PostgreSQL is a reusable set of SQL statements that ar
 
 [![](https://markdown-videos-api.jorgenkh.no/youtube/OqrwTHCFItA)](https://youtu.be/OqrwTHCFItA)
 
-### 1 Why Use Stored Procedures?
+## 1. Why Use Stored Procedures?
 Stored procedures are useful because they:  
 * Automate complex database operations  
 * Reduce network overhead by executing logic directly in the database  
