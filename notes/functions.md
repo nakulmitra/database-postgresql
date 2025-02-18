@@ -17,7 +17,7 @@ In PostgreSQL, functions play a crucial role in database programming by allowing
 
 ## 2. Syntax of Functions in PostgreSQL
 
-### Basic Syntax:
+### Basic Syntax
 ```
 CREATE FUNCTION function_name(param1 DATA_TYPE, param2 DATA_TYPE, ...)
 RETURNS RETURN_TYPE
@@ -48,12 +48,10 @@ We can call this function using the `SELECT` statement:
 ```
 SELECT calculate_annual_salary(5000);
 ```
-**Output:**  
+**Output**  
 ```
 60000
 ```
-
----
 
 ## 3. Functions with Multiple Parameters
 A function can take multiple parameters for more complex calculations.  
@@ -74,7 +72,7 @@ $$;
 ```
 SELECT calculate_bonus(5000, 10);
 ```
-**Output:**  
+**Output**  
 ```
 500
 ```
@@ -100,14 +98,14 @@ $$;
 
 ### Calling the Function
 ```
-SELECT * FROM get_high_salary_employees(5000);
+SELECT * FROM get_high_salary_employees(50000);
 ```
-**Output:**  
+**Output**  
 ```
 emp_id | first_name | last_name | salary  
 -------+------------+-----------+--------  
-1      | Nakul       | Mitra       | 7000  
-2      | Prince       | Chauhan     | 6000  
+1      | Nakul       | Mitra       | 70000  
+2      | Prince       | Chauhan     | 60000  
 ```
 
 ## 5. Managing Functions
