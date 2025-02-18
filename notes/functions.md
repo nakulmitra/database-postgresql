@@ -111,7 +111,7 @@ emp_id | first_name | last_name | salary
 ## 5. Managing Functions
 
 ### Modifying a Function
-To modify a function, you must **drop the existing one** and recreate it.  
+To modify a function, we must **drop the existing one** and recreate it.  
 ```
 DROP FUNCTION calculate_annual_salary(NUMERIC);
 
