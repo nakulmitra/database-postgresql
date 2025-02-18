@@ -25,6 +25,7 @@ from foundational database concepts to advanced features.
 - [RIGHT JOIN in SQL](notes/right-join.md)
 - [FULL JOIN in SQL](notes/full-join.md)
 - [Understanding Stored Procedures in PostgreSQL](notes/storedProcedure.md)
+- [Understanding Functions in PostgreSQL](notes/functions.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
