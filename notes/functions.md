@@ -1,6 +1,8 @@
 ### Understanding Functions in PostgreSQL
 In PostgreSQL, functions play a crucial role in database programming by allowing developers to create reusable logic that performs computations and returns values. Functions are similar to stored procedures but have key differences in terms of functionality and usage.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/0ox3f6IW5KM)](https://youtu.be/0ox3f6IW5KM)
+
 ## 1. Difference Between Functions and Stored Procedures
 
 | Feature               | Functions | Stored Procedures |
