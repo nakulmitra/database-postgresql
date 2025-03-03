@@ -1,6 +1,8 @@
 # Understanding Cursors in PostgreSQL
 In PostgreSQL, a **cursor** is a database object used to retrieve query results one row at a time rather than fetching the entire result set at once. Cursors are especially useful when working with large datasets, as they optimize memory usage and allow row-by-row processing within **PL/pgSQL** functions and procedures.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/rJTd6JKB_9k)](https://youtu.be/rJTd6JKB_9k)
+
 ## 1. What Are Cursors in PostgreSQL?
 ### Definition
 A cursor in PostgreSQL is a pointer that allows traversal over a result set **one row at a time**. This is particularly useful in **procedural operations**, such as **loops**, where we need to process data row by row.
