@@ -27,6 +27,7 @@ from foundational database concepts to advanced features.
 - [Understanding Stored Procedures in PostgreSQL](notes/storedProcedure.md)
 - [Understanding Functions in PostgreSQL](notes/functions.md)
 - [Understanding Cursors in PostgreSQL](notes/cursors.md)
+- [Working with Views in PostgreSQL](notes/views.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
