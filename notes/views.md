@@ -1,6 +1,8 @@
 # Introduction to Views
 A **View** in PostgreSQL is a **virtual table** that represents the result of a saved SQL query. Unlike regular tables, views do not store data themselves but dynamically retrieve data from the underlying tables.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/RhqBAITBQUs)](https://youtu.be/RhqBAITBQUs)
+
 ### Key Characteristics of Views
 * Views are **read-only by default**, meaning we cannot directly insert, update, or delete records in a view.
 * They help **simplify complex queries** by saving frequently used SQL queries as a virtual table.
