@@ -145,6 +145,7 @@ SELECT cron.schedule('0 * * * *', 'REFRESH MATERIALIZED VIEW employee_details_mv
 ```
 * This refreshes the materialized view **every hour** automatically.
 
+## 9. Best Practices
 ### When to Use Materialized Views
 * Large datasets with complex aggregations
 * Reports and dashboards that don't need real-time updates
