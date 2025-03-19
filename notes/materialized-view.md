@@ -1,6 +1,8 @@
 # Introduction
 Materialized Views in PostgreSQL are an essential database optimization feature that helps improve query performance by storing precomputed query results. Unlike regular views, which always fetch the latest data from the underlying tables, materialized views physically store the query output, reducing execution time for expensive and complex queries.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/yHppzfjqm1s)](https://youtu.be/yHppzfjqm1s)
+
 ## 1. Difference Between Views and Materialized Views
 
 | Feature                | View                                | Materialized View                     |
