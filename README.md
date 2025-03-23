@@ -29,6 +29,7 @@ from foundational database concepts to advanced features.
 - [Understanding Cursors in PostgreSQL](notes/cursors.md)
 - [Working with Views in PostgreSQL](notes/views.md)
 - [Understanding Materialized Views in PostgreSQL](notes/materialized-view.md)
+- [PostgreSQL Performance Optimization - Cleaning Dead Tuples & Reindexing](notes/dead-tuple-and-reindexing.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
