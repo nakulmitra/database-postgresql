@@ -32,13 +32,13 @@ CREATE TABLE employees (
 );
 
 -- Insert a row
-INSERT INTO employees (name, salary) VALUES ('Alice', 50000);
+INSERT INTO employees (name, salary) VALUES ('Nakul', 50000);
 
 -- Update the salary (this creates a dead tuple)
-UPDATE employees SET salary = 60000 WHERE name = 'Alice';
+UPDATE employees SET salary = 60000 WHERE name = 'Nakul';
 
 -- Delete a row (leaves a dead tuple)
-DELETE FROM employees WHERE name = 'Alice';
+DELETE FROM employees WHERE name = 'Nakul';
 ```
 
 ### Why Do Dead Tuples Exist?
@@ -65,8 +65,7 @@ WHERE schemaname = 'public';
 **Columns explained:**
 * `n_live_tup` → Number of **live tuples** (valid rows).
 * `n_dead_tup` → Number of **dead tuples** (wasted space).
-
-* **If `n_dead_tup` is high, cleaning up the table is necessary!**
+* If `n_dead_tup` is high, cleaning up the table is necessary.
 
 ## Using VACUUM to Clean Up Dead Tuples
 ### The VACUUM Command
