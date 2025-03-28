@@ -1,11 +1,13 @@
 ## Overview
-Performance optimization is crucial in PostgreSQL to ensure efficient query execution and minimal resource consumption. This guide explores:
+Performance optimization is crucial in PostgreSQL to ensure efficient query execution and minimal resource consumption. Under this we are going to explores:
 
 * What are dead and live tuples?
 * How dead tuples impact database performance
 * Using `VACUUM`, `ANALYZE`, and `AUTOVACUUM` to clean up dead tuples
 * Reindexing to improve query performance
 * Best practices for PostgreSQL performance optimization
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/GOo5d-MmfQM)](https://youtu.be/GOo5d-MmfQM)
 
 ## Understanding Dead and Live Tuples
 
