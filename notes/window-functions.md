@@ -39,7 +39,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - `PARTITION BY d.dept_name` ensures that row numbering is applied separately for each department.
 - `ORDER BY e.salary DESC` assigns the highest salary a row number of 1 within each department.
 - Even if two employees have the same salary, they get different row numbers, since `ROW_NUMBER()` does not handle ties.
@@ -56,7 +56,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - Identical salaries share the same rank.
 - If two employees have the same salary at rank 2, the next rank is **4** (skips rank 3).
 
@@ -72,7 +72,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - If two employees have the same salary at rank 2, the next rank is **3** (no skipping).
 
 ### LAG() - Fetches Previous Row Value
@@ -87,7 +87,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - The **first row in each department will have NULL** since there is no previous row.
 
 ### LEAD() - Fetches Next Row Value
@@ -102,7 +102,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - The **last row in each partition will have NULL** since there is no next row.
 
 ### SUM() - Running Total (Cumulative Sum)
@@ -117,7 +117,7 @@ JOIN public.departments d ON e.dept_id = d.dept_id
 ORDER BY d.dept_name, e.salary DESC;
 ```
 
-* **Explanation:**
+**Explanation:**
 - Each row's `running_total` includes all previous salaries within the department.
 
 ## Real-World Use Cases of Window Functions
