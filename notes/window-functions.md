@@ -3,6 +3,8 @@ Window functions in SQL allow us to perform calculations across a group of relat
 
 This guide explains window functions in detail, covering **ROW_NUMBER(), RANK(), DENSE_RANK(), LAG(), LEAD(), SUM(), and AVG()** with practical examples. Additionally, we'll solve **two common SQL interview questions** using window functions.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/bUC6tft9TxM)](https://youtu.be/bUC6tft9TxM)
+
 ## Difference Between Aggregate and Window Functions
 
 | Feature                 | Aggregate Functions (SUM, AVG, etc.) | Window Functions (ROW_NUMBER, RANK, etc.) |
