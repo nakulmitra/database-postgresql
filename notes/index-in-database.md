@@ -48,7 +48,7 @@ SELECT * FROM employees WHERE full_name = 'dev';
 - Slow for large datasets
 
 #### Sequential Scan Execution Plan
-![Sequential Scan Query Planner](https://github.com/nakulmitra/database-postgresql/images/Sequential_Scan_Query_Planner.png)
+![Sequential Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/Sequential_Scan_Query_Planner.png)
 
 - PostgreSQL scanned **all 5 crore rows** (with parallel workers), even though the result had 1 matches.
 
@@ -109,7 +109,7 @@ SELECT * FROM employees WHERE full_name = 'dev';
 - Fast, especially for selective queries
 
 #### Index Scan Execution Plan
-![Index Scan Query Planner](https://github.com/nakulmitra/database-postgresql/images/Index_Scan_Query_Planner.png)
+![Index Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/Index_Scan_Query_Planner.png)
 
 ```
 explain analyze select * from demo.employees
