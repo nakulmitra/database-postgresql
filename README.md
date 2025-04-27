@@ -31,6 +31,7 @@ from foundational database concepts to advanced features.
 - [Understanding Materialized Views in PostgreSQL](notes/materialized-view.md)
 - [PostgreSQL Performance Optimization - Cleaning Dead Tuples & Reindexing](notes/dead-tuple-and-reindexing.md)
 - [Window Functions in SQL](notes/window-functions.md)
+- [Subqueries in SQL](notes/subqueries.md)
 - [What is an Index in a Database?](notes/index-in-database.md)
 
 ## YouTube playlists
