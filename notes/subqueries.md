@@ -1,14 +1,12 @@
-# Subqueries in SQL
-Welcome to this detailed guide on **Subqueries in SQL**!
-This document explains what subqueries are, their types, practical examples, efficiency tips, common mistakes, and best practices.
-
-## What is a Subquery?
+# What is a Subquery?
 A **subquery** is a query embedded inside another SQL query.
 It is used to perform operations that require multiple steps or intermediary results before delivering the final output.
 
 You can think of a subquery as a **"query inside a query"** that provides data to the main (outer) query.
 
-### Where can Subqueries be Used?
+[![](https://markdown-videos-api.jorgenkh.no/youtube/kvPMeXoykAU)](https://youtu.be/kvPMeXoykAU)
+
+## Where can Subqueries be Used?
 - In `WHERE` clauses (to filter rows)
 - In `FROM` clauses (as a derived table)
 - In `SELECT` lists (to calculate values)
