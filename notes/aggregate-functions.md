@@ -42,7 +42,7 @@ Let's use a hypothetical `sales` table for demonstration.
 ## Practical Examples of Aggregate Functions
 ### 1. Calculating Total Sales (SUM)
 To calculate the total sales revenue
-```
+```sql
 SELECT SUM(quantity * price) AS total_sales
 FROM sales;
 ```
@@ -51,7 +51,7 @@ FROM sales;
 
 ### 2. Finding the Average Price (AVG)
 To find the average price of products
-```
+```sql
 SELECT AVG(price) AS average_price
 FROM sales;
 ```
@@ -60,7 +60,7 @@ FROM sales;
 
 ### 3. Counting Transactions (COUNT)
 To count the total number of transactions
-```
+```sql
 SELECT COUNT(*) AS total_transactions
 FROM sales;
 ```
@@ -69,7 +69,7 @@ FROM sales;
 
 ### 4. Finding Maximum and Minimum Prices (MAX, MIN)
 To find the highest and lowest prices in the table
-```
+```sql
 SELECT MAX(price) AS max_price, MIN(price) AS min_price
 FROM sales;
 ```
@@ -81,7 +81,7 @@ Aggregate functions become even more powerful when paired with the `GROUP BY` cl
 
 ### Example: Total Quantity Sold Per Product
 To calculate the total quantity sold for each product
-```
+```sql
 SELECT product, SUM(quantity) AS total_quantity
 FROM sales
 GROUP BY product;
@@ -94,7 +94,7 @@ The `HAVING` clause filters aggregated data after grouping. It's like the WHERE 
 
 ### Example: Products with Total Quantity > 3
 To find products where the total quantity sold exceeds 3
-```
+```sql
 SELECT product, SUM(quantity) AS total_quantity
 FROM sales
 GROUP BY product
@@ -116,7 +116,7 @@ Example: Filter out rows with `price = 0` before calculating total revenue.
 
 ## Common Mistakes to Avoid
 ### 1. Using Aggregate Functions Without GROUP BY Example (Incorrect)
-```
+```sql
 SELECT product, SUM(quantity)
 FROM sales;
 ```
