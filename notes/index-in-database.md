@@ -99,7 +99,7 @@ SELECT * FROM employees WHERE full_name = 'dev';
 #### Internal Steps:
 1. `Index Structure:` The B-Tree stores `full_name` values in **sorted order**, along with **TIDs** (Tuple IDs: block number + offset).
 2. `Index Lookup:` PostgreSQL traverses the B-Tree in **log(n)** time to find matching entries.
-3. `Heap Fetch:` Using the TID, it directly fetches the required **heap page** and **row offset**.
+3. `Heap Fetch:` Using the TID (Tuple ID), it directly fetches the required **heap page** and **row offset**.
 4. `MVCC Check:` Validates if the row is visible to the current transaction.
 5. `Return:` Matching row is returned immediately.
 
@@ -136,7 +136,7 @@ where full_name = 'dev';
    - This is efficient and avoids reading unrelated rows.
 
 3. **Heap Fetch**:
-   - Since you're using `SELECT *`, PostgreSQL fetches the actual tuple from the heap using the TID from the index.
+   - Since you're using `SELECT *`, PostgreSQL fetches the actual tuple from the heap using the TID (Tuple ID) from the index.
    - Even though it's an index scan, a heap fetch still occurs because not all required columns are in the index.
 
 4. **Performance**:
@@ -196,9 +196,9 @@ CREATE INDEX idx_dept_salary ON employees(dept_id, salary);
 | **Buffer Pool** | In-memory cache of disk pages |
 
 ## Conclusion
-An index is one of the most powerful tools for **query performance optimization**. It dramatically reduces the time needed to find relevant rows in large tables. However, it comes with trade-offs like additional storage and slower writes.
+An index is one of the most powerful feature for **query performance optimization**. It dramatically reduces the time needed to find relevant rows in large tables. However, it comes with trade-offs like additional storage and slower writes.
 
-Understanding how indexes work under the hood, especially in PostgreSQL and allows developers and DBAs to:
+Understanding how indexes work under the hood, especially in relational databases like PostgreSQL, and allows developers and DBAs to:
 - Write better queries
 - Choose optimal indexing strategies
 - Design performant applications
