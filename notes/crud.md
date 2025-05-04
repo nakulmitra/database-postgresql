@@ -15,7 +15,7 @@ These operations allow databases to store, manage, and organize data effectively
 ## 2. The SELECT Statement (Read Operation)
 The `SELECT` statement is used to query and retrieve data from a table. It is the most commonly used SQL operation for viewing and analyzing data.
 ### Basic Syntax
-```
+```sql
 SELECT column1, column2, ...  
 FROM table_name  
 WHERE condition;  
@@ -23,23 +23,23 @@ WHERE condition;
 
 ### Examples
 * Retrieve all columns from a table
-```
+```sql
 SELECT * FROM employees;  
 ```
 
 * Retrieve specific columns from a table
-```
+```sql
 SELECT first_name, salary FROM employees;  
 ```
 
 * Retrieve data with a condition
-```
+```sql
 SELECT first_name, salary FROM employees  
 WHERE salary > 50000;  
 ```
 
 * Sort data using ORDER BY
-```
+```sql
 SELECT first_name, hire_date FROM employees  
 ORDER BY hire_date DESC;  
 ```
@@ -51,20 +51,20 @@ ORDER BY hire_date DESC;
 ## 3. The INSERT Statement (Create Operation)
 The `INSERT` statement is used to add new rows to a table. It allows you to populate tables with data.
 ### Basic Syntax
-```
+```sql
 INSERT INTO table_name (column1, column2, ...)  
 VALUES (value1, value2, ...);  
 ```
 
 ### Examples
 * Insert a new row
-```
+```sql
 INSERT INTO employees (first_name, last_name, email, hire_date, salary)  
 VALUES ('Nakul', 'Mitra', 'nakul@gmail.com', '2021-03-01', 65000);  
 ```
 
 * Insert with default values
-```
+```sql
 INSERT INTO employees (first_name, email, salary)  
 VALUES ('Aman', 'aman@gmail.com', 48000);  
 ```
@@ -76,7 +76,7 @@ VALUES ('Aman', 'aman@gmail.com', 48000);
 ## 4. The UPDATE Statement (Update Operation)
 The `UPDATE` statement modifies existing records in a table. This operation is particularly useful for correcting or altering data.
 ### Basic Syntax
-```
+```sql
 UPDATE table_name  
 SET column1 = value1, column2 = value2, ...  
 WHERE condition;  
@@ -84,21 +84,21 @@ WHERE condition;
 
 ### Examples
 * Update a specific record
-```
+```sql
 UPDATE employees  
 SET salary = 70000  
 WHERE emp_id = 1;  
 ```
 
 * Update multiple records
-```
+```sql
 UPDATE employees  
 SET salary = salary * 1.10  
 WHERE salary < 50000;  
 ```
 
 * Update all records (use with caution)
-```
+```sql
 UPDATE employees  
 SET salary = 60000;  
 ```
@@ -110,26 +110,26 @@ SET salary = 60000;
 ## 5. The DELETE Statement (Delete Operation)
 The `DELETE` statement removes rows from a table. It is essential to use the `WHERE` clause to avoid accidentally deleting all data.
 ### Basic Syntax
-```
+```sql
 DELETE FROM table_name  
 WHERE condition;  
 ```
 
 ### Examples
 * Delete a specific record
-```
+```sql
 DELETE FROM employees  
 WHERE emp_id = 2;  
 ```
 
 * Delete multiple records
-```
+```sql
 DELETE FROM employees  
 WHERE salary < 40000;  
 ```
 
 * Delete all rows (use with caution)
-```
+```sql
 DELETE FROM employees;  
 ```
 
@@ -140,25 +140,25 @@ DELETE FROM employees;
 ## 6. Practical Example: Full CRUD Cycle
 **Scenario: Managing Departments**
 ### 1. Create a New Department
-```
+```sql
 INSERT INTO departments (dept_name)  
 VALUES ('Marketing');  
 ```
 
 ### 2. Read All Departments
-```
+```sql
 SELECT * FROM departments;  
 ```
 
 ### 3. Update Department Name
-```
+```sql
 UPDATE departments  
 SET dept_name = 'Sales and Marketing'  
 WHERE dept_name = 'Marketing';  
 ```
 
 ### 4. Delete the Department
-```
+```sql
 DELETE FROM departments  
 WHERE dept_name = 'Sales and Marketing';  
 ```
@@ -176,5 +176,4 @@ WHERE dept_name = 'Sales and Marketing';
 * Use descriptive column names to enhance query readability and maintainability.
 
 ## 8. Summary
-CRUD operations are the foundation of database management, allowing you to effectively interact with and maintain your data. 
-
+CRUD operations are the foundation of database management, allowing you to effectively interact with and maintain your data.

@@ -6,7 +6,7 @@ The CASE statement in SQL is a powerful tool that allows you to add conditional 
 ## 1. Syntax of CASE Statement  
 The basic syntax of the CASE statement is:  
 
-```
+```sql
 CASE  
     WHEN condition1 THEN result1  
     WHEN condition2 THEN result2  
@@ -25,7 +25,7 @@ END
 ## 2. Types of CASE Statements  
 ### Simple CASE  
 Compares an expression to a set of predefined values.  
-```
+```sql
 CASE expression  
     WHEN value1 THEN result1  
     WHEN value2 THEN result2  
@@ -35,7 +35,7 @@ END
 
 ### Searched CASE  
 Evaluates multiple conditions independently.  
-```
+```sql
 CASE  
     WHEN condition1 THEN result1  
     WHEN condition2 THEN result2  
@@ -55,7 +55,7 @@ END
 ### 3.1 CASE in SELECT Statement  
 Categorize employees based on their salary levels:  
 
-```
+```sql
 SELECT 
     emp_id,  
     name,  
@@ -82,7 +82,7 @@ Explanation:
 ### 3.2 CASE in Aggregate Functions  
 Calculate total salary by salary categories:  
 
-```
+```sql
 SELECT 
     CASE  
         WHEN salary < 30000 THEN 'Low'  
@@ -109,7 +109,7 @@ Output:
 ### 3.3 CASE in WHERE Clause  
 Filter employees based on dynamic conditions:  
 
-```
+```sql
 SELECT emp_id, name, salary  
 FROM employees  
 WHERE  
@@ -124,7 +124,7 @@ Explanation: This query retrieves only employees with salaries categorized as `L
 ### 3.4 CASE in ORDER BY Clause  
 Sort employees by salary category priority:  
 
-```
+```sql
 SELECT emp_id, name, salary  
 FROM employees  
 ORDER BY  
@@ -141,7 +141,7 @@ Explanation:
 ### 3.5 Formatting Output with CASE  
 Add conditional formatting to display salaries with a currency symbol:  
 
-```
+```sql
 SELECT  
     emp_id,  
     name,  

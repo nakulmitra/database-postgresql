@@ -14,7 +14,7 @@ Benefits of Filtering:
 ## 2. The WHERE Clause
 The WHERE clause is used to filter rows based on a specific condition. It is one of the most commonly used SQL clauses for narrowing down results.
 ### Syntax:
-```
+```sql
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
@@ -23,26 +23,26 @@ WHERE condition;
 ### Examples:
 #### 1. Filter by a Single Condition
 * Retrieve all students older than 25
-```
+```sql
 SELECT * FROM students
 WHERE age > 25;
 ```
 
 #### 2. Combine Conditions with Logical Operators
 * `Use AND to require multiple conditions:` Retrieve students older than 25 and with grades above 80
-```
+```sql
 SELECT * FROM students
 WHERE age > 25 AND grade > 80;
 ```
 
 * `Use OR to allow any of multiple conditions:` Retrieve students older than 25 or with grades above 80
-```
+```sql
 SELECT * FROM students
 WHERE age > 25 OR grade > 80;
 ```
 
 #### 3. Filter with Pattern Matching: Use the LIKE operator for partial matches
-```
+```sql
 SELECT * FROM students
 WHERE name LIKE 'A%';  -- Names starting with 'A'
 ```
@@ -54,7 +54,7 @@ WHERE name LIKE 'A%';  -- Names starting with 'A'
 ## 3. The ORDER BY Clause
 The `ORDER BY` clause is used to sort query results in ascending (default) or descending order.
 ### Syntax:
-```
+```sql
 SELECT column1, column2, ...
 FROM table_name
 ORDER BY column1 [ASC|DESC], column2 [ASC|DESC];
@@ -62,19 +62,19 @@ ORDER BY column1 [ASC|DESC], column2 [ASC|DESC];
 
 ### Examples:
 * `Sort by a Single Column:` Retrieve all students, sorted by their grades in ascending order
-```
+```sql
 SELECT * FROM students
 ORDER BY grade;
 ```
 
 * `Sort in Descending Order:` Retrieve all students, sorted by their grades in descending order
-```
+```sql
 SELECT * FROM students
 ORDER BY grade DESC;
 ```
 
 * `Sort by Multiple Columns:` Retrieve all students, sorted first by age (ascending) and then by grade (descending)
-```
+```sql
 SELECT * FROM students
 ORDER BY age ASC, grade DESC;
 ```
@@ -86,7 +86,7 @@ ORDER BY age ASC, grade DESC;
 ## 4. The GROUP BY Clause
 The `GROUP BY` clause is used to group rows that have the same values in specified columns. It is often used with aggregate functions like `SUM()`, `AVG()`, `COUNT()`, `MAX()`, and `MIN()`.
 ### Syntax:
-```
+```sql
 SELECT column1, aggregate_function(column2)
 FROM table_name
 GROUP BY column1;
@@ -94,21 +94,21 @@ GROUP BY column1;
 
 ### Examples:
 * `Calculate Aggregate Values by Group:` Find the average grade for each age group
-```
+```sql
 SELECT age, AVG(grade) AS average_grade
 FROM students
 GROUP BY age;
 ```
 
 * `Count Rows by Group:` Count the number of students in each age group
-```
+```sql
 SELECT age, COUNT(*) AS total_students
 FROM students
 GROUP BY age;
 ```
 
 * `Filter Groups with HAVING:` Use the HAVING clause to filter aggregated data and retrieve age groups where the average grade is greater than 80
-```
+```sql
 SELECT age, AVG(grade) AS average_grade
 FROM students
 GROUP BY age
@@ -123,7 +123,7 @@ HAVING AVG(grade) > 80;
 SQL queries often combine these clauses for more complex operations.
 ### Example:
 Retrieve the average grade for age groups where the grades are above 75, and sort the results by average grade in descending order
-```
+```sql
 SELECT age, AVG(grade) AS average_grade
 FROM students
 WHERE grade > 75

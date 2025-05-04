@@ -57,7 +57,7 @@ PostgreSQL supports advanced data types for specific use cases.
 |    ARRAY    |  Stores arrays of values.  |   tags TEXT[]   |    Multi-valued fields like tags or categories.   |
 
 ## 3. Practical Example: Creating Tables with Data Types
-```
+```sql
 CREATE TABLE employees (
     emp_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,

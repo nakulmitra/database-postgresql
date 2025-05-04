@@ -6,7 +6,7 @@ The **RIGHT JOIN** operation ensures that all records from the **right table** a
 [![](https://markdown-videos-api.jorgenkh.no/youtube/C_7HCJJ51Xw)](https://youtu.be/C_7HCJJ51Xw)
 
 ## Basic Syntax of RIGHT JOIN
-```
+```sql
 SELECT column1, column2, ...
 FROM table1
 RIGHT JOIN table2
@@ -42,7 +42,7 @@ Consider the following two tables:
 
 Now, if we perform a **RIGHT JOIN** on these tables, where we want to retrieve all the department names along with the employees assigned to them, the query would look like this:
 
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 RIGHT JOIN departments

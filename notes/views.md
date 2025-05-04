@@ -19,7 +19,7 @@ Views are useful in various real-world scenarios, such as:
 We can create a view using the `CREATE VIEW` statement.
 
 ### Example: Create a View
-```
+```sql
 CREATE VIEW high_salary_employees AS
 SELECT emp_id, first_name, last_name, salary
 FROM employees
@@ -27,7 +27,7 @@ WHERE salary > 50000;
 ```
 * **This view** filters out employees earning more than 50,000.
 * **To retrieve data**, simply use:
-```
+```sql
 SELECT * FROM high_salary_employees;
 ```
 
@@ -35,7 +35,7 @@ SELECT * FROM high_salary_employees;
 Once a view is created, we can use it like a regular table in `SELECT` queries.
 
 ### Example: Querying a View
-```
+```sql
 SELECT first_name, last_name FROM high_salary_employees;
 ```
 * This retrieves only the `first_name` and `last_name` columns from the view.
@@ -43,7 +43,7 @@ SELECT first_name, last_name FROM high_salary_employees;
 ### Joining Views with Other Tables
 We can also join views with other tables for more useful results.
 
-```
+```sql
 SELECT h.first_name, h.salary, d.department_name
 FROM high_salary_employees h
 JOIN departments d ON h.department_id = d.department_id;
@@ -53,7 +53,7 @@ JOIN departments d ON h.department_id = d.department_id;
 To modify an existing view, use the `CREATE OR REPLACE VIEW` statement.
 
 ### Example: Adding More Columns
-```
+```sql
 CREATE OR REPLACE VIEW high_salary_employees AS
 SELECT emp_id, first_name, last_name, salary, department_id
 FROM employees
@@ -65,7 +65,7 @@ WHERE salary > 50000;
 If a view is no longer needed, it can be removed using `DROP VIEW`.
 
 ### Example: Dropping a View
-```
+```sql
 DROP VIEW high_salary_employees;
 ```
 * This **removes** the view but **does not** affect the original table.
@@ -74,13 +74,13 @@ DROP VIEW high_salary_employees;
 Views allow us to **control access** to specific data.
 
 ### Grant Permission on a View
-```
+```sql
 GRANT SELECT ON high_salary_employees TO devportal;
 ```
 * This grants **read access** to the `devportal` user.
 
 ### Revoke Permission on a View
-```
+```sql
 REVOKE SELECT ON high_salary_employees FROM devportal;
 ```
 * This **removes** read access for `devportal`.

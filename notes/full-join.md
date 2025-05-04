@@ -6,7 +6,7 @@ FULL JOIN is particularly useful when we want to retain all data from both table
 [![](https://markdown-videos-api.jorgenkh.no/youtube/UiGIHmY65tM)](https://youtu.be/UiGIHmY65tM)
 
 ## Syntax of FULL JOIN
-```
+```sql
 SELECT column1, column2, ...
 FROM table1
 FULL JOIN table2
@@ -35,7 +35,7 @@ Consider two tables:
 
 Now, we perform a **FULL JOIN** between `employees` and `departments`:
 
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 FULL JOIN departments
@@ -82,7 +82,7 @@ Avoid `FULL JOIN` if:
 ## Handling NULL Values in FULL JOIN
 Since `FULL JOIN` can return `NULL` values for unmatched records, we can use **COALESCE()** to replace NULLs with default values.
 
-```
+```sql
 SELECT 
     COALESCE(employees.emp_id, 'No Employee') AS emp_id,
     COALESCE(employees.emp_name, 'No Name') AS emp_name,
@@ -115,7 +115,7 @@ ON employees.dept_id = departments.dept_id;
 ### 1. FULL JOIN Not Supported in MySQL
 MySQL **does not support FULL JOIN** directly. Instead, we can use `UNION` of `LEFT JOIN` and `RIGHT JOIN`:
 
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 LEFT JOIN departments
@@ -132,7 +132,7 @@ ON employees.dept_id = departments.dept_id;
 ### 2. NULL Values in JOIN Conditions
 If the common column contains `NULL`, FULL JOIN **will not match those rows**. To handle this:
 
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 FULL JOIN departments

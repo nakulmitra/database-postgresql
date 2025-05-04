@@ -52,12 +52,12 @@ In PostgreSQL, user management is a critical aspect of database administration. 
 Users in PostgreSQL are created using the `CREATE USER` command. A user represents an entity (person or application) that interacts with the database.
 
 ### Syntax:
-```
+```sql
 CREATE USER username WITH PASSWORD 'password';
 ```
 
 ### Example:
-```
+```sql
 CREATE USER new_user WITH PASSWORD 'secure_password';
 ```
 * `new_user:` The username of the account.
@@ -68,24 +68,24 @@ Once a user is created, they need specific privileges to perform actions in the 
 
 ### Granting Basic Access:
 * Allow a user to connect to a specific database:
-```
+```sql
 GRANT CONNECT ON DATABASE your_database TO new_user;
 ```
 
 * Allow schema access:
-```
+```sql
 GRANT USAGE ON SCHEMA your_schema TO new_user;
 ```
 
 ### Granting Table-Specific Privileges:
 * Allow read (SELECT) and write (INSERT, UPDATE, DELETE) permissions:
-```
+```sql
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA your_schema TO new_user;
 ```
 
 ### Revoking Privileges:
 * To revoke access:
-```
+```sql
 REVOKE ALL PRIVILEGES ON SCHEMA your_schema FROM new_user;
 ```
 
@@ -93,19 +93,19 @@ REVOKE ALL PRIVILEGES ON SCHEMA your_schema FROM new_user;
 PostgreSQL allows modifying user roles and credentials using the `ALTER USER` command.
 
 ### Changing a User's Password:
-```
+```sql
 ALTER USER new_user WITH PASSWORD 'new_secure_password';
 ```
 
 ### Updating User Roles:
 * `Example:` Grant a new role or privilege to a user
-```
+```sql
 GRANT UPDATE ON ALL TABLES IN SCHEMA your_schema TO new_user;
 ```
 
 ### Removing a Role:
 * `Example:` Remove a specific privilege from a user
-```
+```sql
 REVOKE INSERT ON ALL TABLES IN SCHEMA your_schema FROM new_user;
 ```
 
@@ -114,22 +114,22 @@ When a user is no longer required, you can safely delete the user account. Howev
 
 ### Steps to Delete a User:
 1. `Reassign Ownership of Database Objects:` If the user owns database objects, their ownership must be reassigned to another user
-```
+```sql
 REASSIGN OWNED BY old_user TO new_owner;
 ```
 
 2. `Drop User-Owned Objects:` Remove any objects owned by the user
-```
+```sql
 DROP OWNED BY old_user;
 ```
 
 3. `Delete the User:` Once the above steps are completed, delete the user
-```
+```sql
 DROP USER old_user;
 ```
 
 ### Example
-```
+```sql
 REASSIGN OWNED BY devportal TO admin_user;
 DROP OWNED BY devportal;
 DROP USER devportal;
@@ -137,7 +137,7 @@ DROP USER devportal;
 
 ## 6. Practical Examples
 * `Example 1:` Creating a New User and Granting Privileges
-```
+```sql
 CREATE USER analyst WITH PASSWORD 'analyst_pass';
 GRANT CONNECT ON DATABASE sales_db TO analyst;
 GRANT USAGE ON SCHEMA reporting TO analyst;
@@ -145,13 +145,13 @@ GRANT SELECT ON ALL TABLES IN SCHEMA reporting TO analyst;
 ```
 
 * `Example 2:` Updating User Permissions
-```
+```sql
 GRANT INSERT, UPDATE ON ALL TABLES IN SCHEMA reporting TO analyst;
 REVOKE DELETE ON ALL TABLES IN SCHEMA reporting FROM analyst;
 ```
 
 * `Example 3:` Deleting a User
-```
+```sql
 REASSIGN OWNED BY analyst TO admin;
 DROP OWNED BY analyst;
 DROP USER analyst;
@@ -161,7 +161,7 @@ DROP USER analyst;
 ### Use Role-Based Access Control (RBAC)
 * Group users with similar privileges into roles and assign roles to users.
 * `Example:`
-```
+```sql
 CREATE ROLE readonly_role;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly_role;
 GRANT readonly_role TO analyst_user;

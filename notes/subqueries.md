@@ -36,7 +36,7 @@ Subqueries can be categorized based on:
 ### Example 1: Single-row Subquery
 Find employees earning more than the company's average salary:
 
-```
+```sql
 SELECT employee_name, salary
 FROM employees
 WHERE salary > (SELECT AVG(salary) FROM employees);
@@ -45,7 +45,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 ### Example 2: Multi-row Subquery
 Find department names where employees earn more than 30K:
 
-```
+```sql
 SELECT dept_name
 FROM departments
 WHERE dept_id IN (
@@ -58,7 +58,7 @@ WHERE dept_id IN (
 ### Example 3: Correlated Subquery
 List employees who earn more than the average salary in their department:
 
-```
+```sql
 SELECT employee_name, department_id, salary
 FROM employees e1
 WHERE salary > (
@@ -71,7 +71,7 @@ WHERE salary > (
 ### Example 4: Subquery with Aggregates
 Find the department with the highest total salary:
 
-```
+```sql
 SELECT department_id, total_salary
 FROM (
     SELECT department_id, SUM(salary) AS total_salary

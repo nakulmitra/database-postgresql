@@ -17,14 +17,14 @@ A simple `employees` table might look like this:
 To create a table in PostgreSQL, use the `CREATE TABLE` command. Each column is defined with a name, data type, and optional constraints.
 
 ### Basic Syntax
-```
+```sql
 CREATE TABLE table_name (
     column_name data_type constraints
 );
 ```
 
 ### Example: Creating the employees Table
-```
+```sql
 CREATE TABLE employees (
     emp_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -59,19 +59,19 @@ CREATE TABLE employees (
 PostgreSQL allows you to modify an existing table using the `ALTER TABLE` command.
 
 ### Add a Column
-```
+```sql
 ALTER TABLE employees ADD COLUMN department VARCHAR(50);
 ```
 Adds a new column named `department` to the `employees` table.
 
 ### Modify a Column
-```
+```sql
 ALTER TABLE employees ALTER COLUMN salary SET NOT NULL;
 ```
 Ensures the `salary` column cannot have null values.
 
 ### Remove a Column
-```
+```sql
 ALTER TABLE employees DROP COLUMN department;
 ```
 Deletes the `department` column from the `employees` table.
@@ -83,40 +83,40 @@ Constraints are rules applied to columns to ensure data accuracy and integrity. 
 #### 1. Primary Key:
 * Ensures each row has a unique identifier.
 * Example:
-```
+```sql
 emp_id SERIAL PRIMARY KEY
 ```
 
 #### 2. Foreign Key:
 * Establishes a relationship between two tables.
 * Example:
-```
+```sql
 FOREIGN KEY (manager_id) REFERENCES employees(emp_id)
 ```
 
 #### 3. Unique:
 * Ensures no duplicate values in a column.
 * Example:
-```
+```sql
 email VARCHAR(100) UNIQUE
 ```
 
 #### 4. Not Null:
 * Ensures a column cannot have null values.
 * Example:
-```
+```sql
 first_name VARCHAR(50) NOT NULL
 ```
 
 #### 5. Check:
 * Validates a specific condition.
 * Example:
-```
+```sql
 salary NUMERIC(10, 2) CHECK (salary > 0)
 ```
 
 ### Example: Creating a departments Table
-```
+```sql
 CREATE TABLE departments (
     dept_id SERIAL PRIMARY KEY,
     dept_name VARCHAR(100) NOT NULL UNIQUE,
@@ -131,17 +131,17 @@ CREATE TABLE departments (
 * `FOREIGN KEY (manager_id) REFERENCES employees(emp_id):` Links manager_id in the departments table to emp_id in the employees table.
 
 ## 4. Practical Example: CRUD Operations
-Let’s see how to perform basic CRUD (Create, Read, Update, Delete) operations using the tables we created.
+Let's see how to perform basic CRUD (Create, Read, Update, Delete) operations using the tables we created.
 
 ### Insert Data
-```
+```sql
 INSERT INTO employees (first_name, last_name, email, hire_date, salary) 
 VALUES 
 ('Aman', 'Tiwari', 'aman@gmail.com', '2024-01-15', 55000.00),
 ('Harshada', 'Kute', 'hk@gmail.com', DEFAULT, 45000.00);
 ```
 
-```
+```sql
 INSERT INTO departments (dept_name, manager_id) 
 VALUES 
 ('HR', 1),
@@ -149,19 +149,19 @@ VALUES
 ```
 
 ### Retrieve Data
-```
+```sql
 SELECT * FROM employees;
 ```
 
 ### Update Data
-```
+```sql
 UPDATE employees
 SET salary = 60000
 WHERE emp_id = 1;
 ```
 
 ### Delete Data
-```
+```sql
 DELETE FROM employees
 WHERE emp_id = 2;
 ```

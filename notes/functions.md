@@ -20,7 +20,7 @@ In PostgreSQL, functions play a crucial role in database programming by allowing
 ## 2. Syntax of Functions in PostgreSQL
 
 ### Basic Syntax
-```
+```sql
 CREATE FUNCTION function_name(param1 DATA_TYPE, param2 DATA_TYPE, ...)
 RETURNS RETURN_TYPE
 LANGUAGE plpgsql
@@ -34,7 +34,7 @@ $$;
 
 ### Example 1: Creating a Simple Function
 Let's create a function to calculate an employee's **annual salary** based on their monthly salary.  
-```
+```sql
 CREATE FUNCTION calculate_annual_salary(monthly_salary NUMERIC)
 RETURNS NUMERIC
 LANGUAGE plpgsql
@@ -47,7 +47,7 @@ $$;
 
 ### Calling the Function
 We can call this function using the `SELECT` statement:  
-```
+```sql
 SELECT calculate_annual_salary(5000);
 ```
 **Output**  
@@ -59,7 +59,7 @@ SELECT calculate_annual_salary(5000);
 A function can take multiple parameters for more complex calculations.  
 
 ### Example 2: Function with Two Parameters (Calculating Bonus)
-```
+```sql
 CREATE FUNCTION calculate_bonus(salary NUMERIC, bonus_percentage NUMERIC)
 RETURNS NUMERIC
 LANGUAGE plpgsql
@@ -71,7 +71,7 @@ $$;
 ```
 
 ### Calling the Function 
-```
+```sql
 SELECT calculate_bonus(5000, 10);
 ```
 **Output**  
@@ -84,7 +84,7 @@ SELECT calculate_bonus(5000, 10);
 Functions in PostgreSQL can **return entire tables** instead of just a single value.  
 
 ### Example 3: Returning a Table of High Salary Employees
-```
+```sql
 CREATE FUNCTION get_high_salary_employees(threshold NUMERIC)
 RETURNS TABLE(emp_id INT, first_name TEXT, last_name TEXT, salary NUMERIC)
 LANGUAGE plpgsql
@@ -99,7 +99,7 @@ $$;
 ```
 
 ### Calling the Function
-```
+```sql
 SELECT * FROM get_high_salary_employees(50000);
 ```
 **Output**  
@@ -114,7 +114,7 @@ emp_id | first_name | last_name | salary
 
 ### Modifying a Function
 To modify a function, we must **drop the existing one** and recreate it.  
-```
+```sql
 DROP FUNCTION calculate_annual_salary(NUMERIC);
 
 CREATE FUNCTION calculate_annual_salary(monthly_salary NUMERIC)
@@ -128,7 +128,7 @@ $$;
 ```
 
 Second option is to use **CREATE AND REPLACE**
-```
+```sql
 CREATE OR REPLACE FUNCTION calculate_annual_salary(monthly_salary NUMERIC)
 RETURNS NUMERIC
 LANGUAGE plpgsql
@@ -141,7 +141,7 @@ $$;
 
 ### Dropping a Function
 To delete a function permanently:  
-```
+```sql
 DROP FUNCTION calculate_annual_salary(NUMERIC);
 ```
 

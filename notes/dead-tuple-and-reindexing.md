@@ -26,7 +26,7 @@ In PostgreSQL, **tuples** represent rows in a table. Whenever data is **INSERTED
 
 ### Example of Dead Tuples Creation
 
-```
+```sql
 CREATE TABLE employees (
     emp_id SERIAL PRIMARY KEY,
     name VARCHAR(50),
@@ -58,7 +58,7 @@ Dead tuples **consume disk space** and slow down queries because:
 ### Checking Dead Tuples in a Table
 We can check for dead tuples using the `pg_stat_user_tables` view:
 
-```
+```sql
 SELECT relname AS table_name, n_live_tup, n_dead_tup 
 FROM pg_stat_user_tables 
 WHERE schemaname = 'public';
@@ -74,7 +74,7 @@ WHERE schemaname = 'public';
 The `VACUUM` command removes dead tuples and **reclaims disk space**.
 
 * **Basic Vacuum Command**
-```
+```sql
 VACUUM employees;
 ```
 * Removes dead tuples and **marks space as reusable**.
@@ -84,7 +84,7 @@ VACUUM employees;
 `VACUUM ANALYZE` removes dead tuples **and updates statistics** for better query planning.
 
 * **Run Vacuum Analyze**
-```
+```sql
 VACUUM ANALYZE employees;
 ```
 * **Improves query performance** by updating PostgreSQL's query planner.
@@ -93,7 +93,7 @@ VACUUM ANALYZE employees;
 PostgreSQL has an **autovacuum** process that runs automatically to clean dead tuples.
 
 * **Checking Autovacuum Activity**
-```
+```sql
 SELECT relname, last_autovacuum
 FROM pg_stat_user_tables 
 WHERE last_autovacuum IS NOT NULL;
@@ -104,7 +104,7 @@ WHERE last_autovacuum IS NOT NULL;
 * **Configuring Autovacuum for Better Performance**
 If autovacuum is not cleaning up dead tuples efficiently, adjust **postgresql.conf** settings:
 
-```
+```sql
 autovacuum = on
 autovacuum_vacuum_threshold = 50
 autovacuum_vacuum_cost_limit = 2000
@@ -112,7 +112,7 @@ autovacuum_vacuum_cost_limit = 2000
 
 We can also **manually configure autovacuum** for a specific table:
 
-```
+```sql
 ALTER TABLE employees
 SET (autovacuum_vacuum_threshold = 1000, autovacuum_vacuum_scale_factor = 0.0);
 ```
@@ -127,7 +127,7 @@ Indexes grow **over time** due to **updates and deletes**.
 ### Checking for Index Bloat
 We can check for bloated indexes using:
 
-```
+```sql
 SELECT 
     schemaname, 
     relname AS table_name, 
@@ -142,17 +142,17 @@ WHERE idx_scan > 0;
 ### Running REINDEX to Optimize Performance
 
 * **Reindexing a Single Index**
-```
+```sql
 REINDEX INDEX employees_name_idx;
 ```
 
 * **Reindexing an Entire Table**
-```
+```sql
 REINDEX TABLE employees;
 ```
 
 * **Reindexing the Entire Database**
-```
+```sql
 REINDEX DATABASE mydatabase;
 ```
 
@@ -169,14 +169,14 @@ Ensure autovacuum is enabled to **automatically clean dead tuples**.
 * **Schedule Manual VACUUM for Large Tables**
 For large tables, schedule a manual `VACUUM` **during off-peak hours**:
 
-```
+```sql
 VACUUM ANALYZE my_large_table;
 ```
 
 * **Monitor Dead Tuples Regularly**
 Check dead tuples periodically:
 
-```
+```sql
 SELECT relname, n_live_tup, n_dead_tup 
 FROM pg_stat_user_tables;
 ```
@@ -184,7 +184,7 @@ FROM pg_stat_user_tables;
 * **Use Reindexing for Large Indexes**
 If indexes become **too large**, use:
 
-```
+```sql
 REINDEX TABLE my_table;
 ```
 

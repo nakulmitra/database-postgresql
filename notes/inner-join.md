@@ -12,7 +12,7 @@ An **INNER JOIN** returns rows from multiple tables where the join condition is 
 - Non-matching rows are excluded.
 
 ## 2. Basic Syntax of INNER JOIN
-```
+```sql
 SELECT column1, column2, ...
 FROM table1
 INNER JOIN table2
@@ -44,7 +44,7 @@ Let's take two tables, **employees** and **departments**, as an example:
 | 104     | IT        |
 
 ## 4. INNER JOIN Query Example
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 INNER JOIN departments
@@ -92,7 +92,7 @@ Imagine two overlapping circles:
 
 ## Example Code Snippet
 Here's the complete example for reference:
-```
+```sql
 -- Query to retrieve employees with their department names
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees

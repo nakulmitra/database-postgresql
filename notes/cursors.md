@@ -26,13 +26,13 @@ A cursor follows a **four-step lifecycle** in PostgreSQL:
 ## 3. Declaring and Using Cursors in PostgreSQL
 ### Basic Cursor Syntax
 A cursor is declared using the `DECLARE` statement inside a **PL/pgSQL block**:
-```
+```sql
 DECLARE cursor_name CURSOR FOR query;
 ```
 After declaring, it must be **opened**, **fetched**, and **closed**.
 
 #### PL/pgSQL Function to Iterate Over Rows Using a Cursor
-```
+```sql
 CREATE OR REPLACE FUNCTION iterate_employees()
 RETURNS TEXT
 LANGUAGE plpgsql
@@ -66,12 +66,12 @@ $$;
 * `CLOSE:` Releases resources associated with the cursor.
 
 **Calling the Function:**
-```
+```sql
 SELECT * from iterate_employees();
 ```
 
 **Sample Output:**
-```
+```sql
 NOTICE: Employee Id: 1, Name: Nakul Mitra, Salary: 60000
 NOTICE: Employee Id: 2, Name: Piyush Mudgal, Salary: 50000
 ...
@@ -82,7 +82,7 @@ NOTICE: Employee Id: 2, Name: Piyush Mudgal, Salary: 50000
 Cursors can be used to process data conditionally. Let's say we want to **increase the salary** of employees earning above a certain threshold.
 
 ### Example: Conditional Updates Using a Cursor
-```
+```sql
 CREATE OR REPLACE FUNCTION update_high_salary_employees(threshold NUMERIC, bonus NUMERIC)
 RETURNS TEXT
 LANGUAGE plpgsql
@@ -112,7 +112,7 @@ $$;
 ```
 
 **Calling the Function:**
-```
+```sql
 SELECT * from update_high_salary_employees(45000, 1000);
 ```
 
@@ -128,7 +128,7 @@ NOTICE: Updated Employee Id: 2, New Salary: 51000
 We can also define and manage **cursors explicitly** within an anonymous PL/pgSQL block as well.  
 
 ### Example: Explicit Cursor Management
-```
+```sql
 DO $$
 DECLARE
     emp_cursor CURSOR FOR SELECT emp_id, first_name FROM employees;

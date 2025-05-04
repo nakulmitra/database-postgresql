@@ -7,7 +7,7 @@ The `LEFT JOIN` is one of the fundamental SQL join operations that combines rows
 
 ### 1. Basic Syntax
 The syntax for a `LEFT JOIN` query is as follows:
-```
+```sql
 SELECT column1, column2, ...
 FROM table1
 LEFT JOIN table2
@@ -42,7 +42,7 @@ Consider the following two tables:
 | 104     | IT          |
 
 #### LEFT JOIN Query
-```
+```sql
 SELECT employees.emp_id, employees.emp_name, departments.dept_name
 FROM employees
 LEFT JOIN departments
@@ -76,7 +76,7 @@ The result of a `LEFT JOIN` includes:
 
 2. **Data Audits:**
    Use a `LEFT JOIN` to find rows in the left table that don't have corresponding entries in the right table. For example:
-   ```
+   ```sql
    SELECT employees.emp_id, employees.emp_name
    FROM employees
    LEFT JOIN departments
@@ -99,7 +99,7 @@ The result of a `LEFT JOIN` includes:
 ### **Summary**
 - **Definition**: A `LEFT JOIN` ensures all rows from the left table are included in the result set, with `NULL` values for non-matching rows from the right table.
 - **Key Syntax**:
-   ```
+   ```sql
    SELECT columns
    FROM table1
    LEFT JOIN table2

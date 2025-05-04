@@ -21,7 +21,7 @@ Stored procedures are useful because they:
 
 ## 3. Creating a Simple Stored Procedure in PostgreSQL
 ### Example: A Procedure to Increase Employee Salaries
-```
+```sql
 CREATE PROCEDURE update_salaries(IN percent_increase NUMERIC)
 LANGUAGE plpgsql
 AS $$
@@ -40,7 +40,7 @@ $$;
 
 ## 4. Calling a Stored Procedure
 Unlike functions, procedures are executed using the `CALL` statement:
-```
+```sql
 CALL update_salaries(10);
 ```
 
@@ -50,7 +50,7 @@ This increases employee salaries by **10%**.
 Stored procedures in PostgreSQL **can manage transactions** using `COMMIT` and `ROLLBACK`, which functions cannot.  
 
 ### Example: Using Transaction Control
-```
+```sql
 CREATE PROCEDURE update_salaries_with_transaction(IN percent_increase NUMERIC)
 LANGUAGE plpgsql
 AS $$
@@ -82,7 +82,7 @@ $$;
 
 ### 6.1 Modifying a Procedure
 Stored procedures can be modified by **dropped and recreated**.
-```
+```sql
 DROP PROCEDURE update_salaries;
 
 CREATE PROCEDURE update_salaries(IN percent_increase NUMERIC)
@@ -95,7 +95,7 @@ $$;
 ```
 
 Use **CREATE OR REPLACE**
-```
+```sql
 CREATE OR REPLACE PROCEDURE update_salaries(IN percent_increase NUMERIC)
 LANGUAGE plpgsql
 AS $$
@@ -106,7 +106,7 @@ $$;
 ```
 
 ### 6.2 Dropping a Procedure
-```
+```sql
 DROP PROCEDURE update_salaries;
 ```
 

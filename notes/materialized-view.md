@@ -13,7 +13,7 @@ Materialized Views in PostgreSQL are an essential database optimization feature 
 | **Use Case**          | When real-time data is needed. | When performance optimization is needed. |
 
 ### Example of a Regular View
-```
+```sql
 CREATE VIEW employee_view AS
 SELECT emp_id, first_name, last_name, salary
 FROM employees;
@@ -21,7 +21,7 @@ FROM employees;
 * This view fetches real-time data from the `employees` table.
 
 ### Example of a Materialized View
-```
+```sql
 CREATE MATERIALIZED VIEW employee_details_mv AS
 SELECT emp_id, first_name, last_name, salary
 FROM employees;
@@ -31,13 +31,13 @@ FROM employees;
 ## 2. Creating a Materialized View
 
 ### Syntax
-```
+```sql
 CREATE MATERIALIZED VIEW view_name AS
 SELECT column1, column2, ...
 FROM table_name;
 ```
 ### Example
-```
+```sql
 CREATE MATERIALIZED VIEW employee_details_mv AS
 SELECT emp_id, first_name, last_name, salary
 FROM employees;
@@ -45,7 +45,7 @@ FROM employees;
 * This stores employee details in a separate physical table, reducing the need for repeated expensive queries.
 
 ### Querying a Materialized View
-```
+```sql
 SELECT * FROM employee_details_mv;
 ```
 * This retrieves the stored data instantly.
@@ -54,13 +54,13 @@ SELECT * FROM employee_details_mv;
 Since materialized views store data separately, they **don't update automatically** when the underlying data changes. We need to refresh them manually or on a schedule.
 
 ### Manual Refresh
-```
+```sql
 REFRESH MATERIALIZED VIEW employee_details_mv;
 ```
 * This updates the materialized view with the latest data.
 
 ### **Refreshing with `CONCURRENTLY`**
-```
+```sql
 REFRESH MATERIALIZED VIEW CONCURRENTLY employee_details_mv;
 ```
 * Allows refreshing the view without locking it, so users can still query the old data while the refresh is happening.
@@ -72,7 +72,7 @@ REFRESH MATERIALIZED VIEW CONCURRENTLY employee_details_mv;
 ### Modifying a Materialized View
 PostgreSQL **does not support direct modifications** to a materialized view. Instead, we need to **drop and recreate it**.
 
-```
+```sql
 DROP MATERIALIZED VIEW employee_details_mv;
 CREATE MATERIALIZED VIEW employee_details_mv AS
 SELECT emp_id, first_name, last_name, salary, dept_id
@@ -81,7 +81,7 @@ FROM employees;
 * This updates the structure of the materialized view.
 
 ### Dropping a Materialized View
-```
+```sql
 DROP MATERIALIZED VIEW employee_details_mv;
 ```
 * Deletes the materialized view from the database.
@@ -90,14 +90,14 @@ DROP MATERIALIZED VIEW employee_details_mv;
 To demonstrate the performance difference, let's assume we have an `employees` table with **50 million records**.
 
 ### Creating a View
-```
+```sql
 CREATE OR REPLACE VIEW employees_dept_avg_salary AS
 SELECT dept_id, AVG(salary) AS avg_salary, COUNT(1) AS employee_count
 FROM employees
 GROUP BY dept_id;
 ```
 ### Creating a Materialized View
-```
+```sql
 CREATE MATERIALIZED VIEW employees_dept_avg_salary_mv AS
 SELECT dept_id, AVG(salary) AS avg_salary, COUNT(1) AS employee_count
 FROM employees
@@ -105,13 +105,13 @@ GROUP BY dept_id;
 ```
 ### Query Execution Time
 #### Querying the View:
-```
+```sql
 EXPLAIN ANALYZE SELECT * FROM employees_dept_avg_salary;
 ```
 * **Slower Execution**: Since it recomputes the aggregation every time.
 
 #### Querying the Materialized View:
-```
+```sql
 EXPLAIN ANALYZE SELECT * FROM employees_dept_avg_salary_mv;
 ```
 * **Much Faster Execution**: Data is precomputed and stored, reducing query execution time.
@@ -138,11 +138,11 @@ Materialized views significantly **boost performance** for complex queries by st
 We can schedule materialized view refreshes using **pg_cron**.
 
 ### Installing `pg_cron` in PostgreSQL
-```
+```sql
 CREATE EXTENSION IF NOT EXISTS pg_cron;
 ```
 ### Scheduling a Refresh Every Hour
-```
+```sql
 SELECT cron.schedule('0 * * * *', 'REFRESH MATERIALIZED VIEW employee_details_mv');
 ```
 * This refreshes the materialized view **every hour** automatically.

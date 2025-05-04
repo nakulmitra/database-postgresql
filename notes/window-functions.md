@@ -21,7 +21,7 @@ Window functions use the `OVER()` clause, which can have:
 * **ORDER BY** - Specifies order within each partition (optional).
 
 ### Basic Syntax:
-```
+```sql
 SELECT column_name, 
        window_function() OVER (PARTITION BY column ORDER BY column) AS result
 FROM table_name;
@@ -33,7 +33,7 @@ FROM table_name;
 The `ROW_NUMBER()` function assigns a unique sequential number to each row within a partition.
 
 #### Example: Assigning Row Numbers to Employees by Department
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        ROW_NUMBER() OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS row_num
 FROM public.employees e 
@@ -50,7 +50,7 @@ ORDER BY d.dept_name, e.salary DESC;
 The `RANK()` function assigns a ranking to each row, but identical values receive the same rank, and gaps appear in the ranking sequence.
 
 #### Example: Ranking Employees by Salary
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        RANK() OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS rank
 FROM public.employees e 
@@ -66,7 +66,7 @@ ORDER BY d.dept_name, e.salary DESC;
 `DENSE_RANK()` works like `RANK()`, but without skipping ranks.
 
 #### Example: Dense Ranking Employees by Salary
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        DENSE_RANK() OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS dense_rank
 FROM public.employees e 
@@ -81,7 +81,7 @@ ORDER BY d.dept_name, e.salary DESC;
 The `LAG()` function allows us to access the value of a column from the **previous row**.
 
 #### Example: Fetching Previous Employee's Salary
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        LAG(e.salary) OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS previous_salary
 FROM public.employees e 
@@ -96,7 +96,7 @@ ORDER BY d.dept_name, e.salary DESC;
 The `LEAD()` function retrieves the **next row’s value** based on the ordering criteria.
 
 #### Example: Fetching Next Employee's Salary
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        LEAD(e.salary) OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS next_salary
 FROM public.employees e 
@@ -111,7 +111,7 @@ ORDER BY d.dept_name, e.salary DESC;
 The `SUM()` function computes a running total of a column.
 
 #### Example: Calculating Running Salary Total
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        SUM(e.salary) OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS running_total
 FROM public.employees e 
@@ -126,7 +126,7 @@ ORDER BY d.dept_name, e.salary DESC;
 
 ### Interview Question 1: Find the Top 3 Highest Salaries in Each Department
 #### Solution Using ROW_NUMBER()
-```
+```sql
 SELECT * FROM (
     SELECT e.first_name, d.dept_name, e.salary,
            ROW_NUMBER() OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS row_num
@@ -138,7 +138,7 @@ SELECT * FROM (
 
 ### Interview Question 2: Find Salary Difference Between Current Employee and Previous Employee
 #### Solution Using LAG()
-```
+```sql
 SELECT e.first_name, d.dept_name, e.salary,
        salary - LAG(salary) OVER (PARTITION BY d.dept_name ORDER BY e.salary DESC) AS salary_difference
 FROM public.employees e 

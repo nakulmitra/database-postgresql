@@ -38,21 +38,21 @@ Schemas offer several advantages that improve database organization and scalabil
 ## 3. Working with Schemas in PostgreSQL
 ### 3.1 Creating a Schema
 To create a new schema, use the `CREATE SCHEMA` command:
-```
+```sql
 CREATE SCHEMA library_schema;
 ```
 This creates a schema named `library_schema`. By default, the user who creates the schema is the owner and has full control over it.
 
 ### 3.2 Setting a Default Schema
 To avoid specifying schema names in every query, we can set a default schema using the `search_path`:
-```
+```sql
 SET search_path TO library_schema, public;
 ```
 This prioritizes `library_schema` for all queries unless another schema is explicitly mentioned.
 
 ### 3.3 Creating Objects in a Schema
 We can create objects like tables, views, or functions within a specific schema:
-```
+```sql
 CREATE TABLE library_schema.books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100),
@@ -63,7 +63,7 @@ Here, the `books` table is created inside the `library_schema` schema.
 
 ### 3.4 Renaming or Changing Ownership
 We can rename a schema or transfer its ownership to another user:
-```
+```sql
 -- Rename a schema
 ALTER SCHEMA library_schema RENAME TO books_schema;
 
@@ -73,7 +73,7 @@ ALTER SCHEMA books_schema OWNER TO new_owner;
 
 ### 3.5 Deleting a Schema
 To remove a schema, use the `DROP SCHEMA` command. Be cautious - this is irreversible:
-```
+```sql
 -- Drop an empty schema
 DROP SCHEMA books_schema;
 
@@ -90,7 +90,7 @@ Use schemas to group related objects logically. For example:
 
 ### 4.2 Restrict Access
 Grant schema-level permissions to control access to objects. For example:
-```
+```sql
 -- Allow user `analyst` to read data from the `reports` schema
 GRANT USAGE ON SCHEMA reports TO analyst;
 GRANT SELECT ON ALL TABLES IN SCHEMA reports TO analyst;
@@ -101,21 +101,21 @@ Use the `public` schema only for shared or temporary objects. Create dedicated s
 
 ### 4.4 Use Search Paths
 Set appropriate search paths to reduce the need for explicit schema names:
-```
+```sql
 SET search_path TO finance, public;
 ```
 
 ### 5. Practical Example: Organizing a Library System
 Here’s how we can use schemas to organize a library database:
 ### Step 1: Create Schemas
-```
+```sql
 CREATE SCHEMA books;
 CREATE SCHEMA members;
 CREATE SCHEMA staff;
 ```
 
 ### Step 2: Add Tables to Schemas
-```
+```sql
 -- Add a table to the books schema
 CREATE TABLE books.inventory (
     id SERIAL PRIMARY KEY,
@@ -132,7 +132,7 @@ CREATE TABLE members.details (
 ```
 
 ### Step 3: Query Tables
-```
+```sql
 -- Querying the books table
 SELECT * FROM books.inventory;
 
@@ -141,7 +141,7 @@ SELECT * FROM members.details;
 ```
 
 ### Step 4: Grant Permissions
-```
+```sql
 -- Allow analysts to read data from the books schema
 GRANT USAGE ON SCHEMA books TO analyst;
 GRANT SELECT ON ALL TABLES IN SCHEMA books TO analyst;

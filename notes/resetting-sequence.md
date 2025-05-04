@@ -9,7 +9,7 @@ A sequence in PostgreSQL is a special database object designed to generate uniqu
 When a column is defined as `SERIAL` or `BIGSERIAL`, PostgreSQL automatically creates a sequence and associates it with that column. Each time a new row is inserted into the table, the sequence generates a unique value for the column.
 
 ### Example:
-```
+```sql
 CREATE TABLE employees (
     emp_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
@@ -35,7 +35,7 @@ When a sequence is out of sync, PostgreSQL may try to reuse an already existing 
 * By default, PostgreSQL names sequences in the format: `<table_name>_<column_name>_seq`.
 * To find the sequence associated with a column, query the `pg_sequences` or `information_schema` views.
 #### Example:
-```
+```sql
 SELECT column_default 
 FROM information_schema.columns 
 WHERE table_name = 'employees' AND column_name = 'emp_id';
@@ -47,7 +47,7 @@ This confirms that `employees_emp_id_seq` is the sequence for the `emp_id` colum
 ### Step 2: Check the Current Sequence Value
 * Use the `last_value` or `currval` function to check the current value of the sequence.
 #### Example:
-```
+```sql
 SELECT last_value FROM employees_emp_id_seq;
 ```
 Output:
@@ -60,7 +60,7 @@ Output:
 ### Step 3: Find the Maximum ID in the Table
 * Determine the highest value currently in the table for the column linked to the sequence.
 Example:
-```
+```sql
 SELECT MAX(emp_id) AS max_id FROM employees;
 ```
 Output:
@@ -74,7 +74,7 @@ This indicates that the maximum ID in the `employees` table is 10.
 ### Step 4: Reset the Sequence
 * To reset the sequence, use the `SETVAL` function. This sets the sequence value to the current maximum value in the table.
 #### Example:
-```
+```sql
 SELECT SETVAL('employees_emp_id_seq', (SELECT MAX(emp_id) FROM employees));
 ```
 This command ensures the sequence resumes numbering from the next available ID after the maximum.
@@ -88,7 +88,7 @@ Output:
 ### Step 5: Verify the Reset
 * Confirm the sequence reset by checking the next value the sequence will generate using `nextval`.
 #### Example:
-```
+```sql
 SELECT nextval('employees_emp_id_seq');
 ```
 Output:
@@ -102,7 +102,7 @@ The sequence is now in sync and will generate values starting from 11.
 ### Step 6: Insert New Records
 * After resetting the sequence, new inserts will work without any conflicts.
 #### Example:
-```
+```sql
 INSERT INTO employees (first_name, last_name)
 VALUES ('Nakul', 'Mitra');
 ```

@@ -12,15 +12,15 @@ The **WHERE** and **HAVING** clauses are essential components of SQL, used to fi
 ### Purpose
 The WHERE clause is used to specify conditions that individual rows must meet to be included in the result set.
 ### Syntax
-```
+```sql
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ```
 
 ### Example 1: Basic Filtering:
-Let’s filter employees with a salary greater than 50,000
-```
+Let's filter employees with a salary greater than 50,000
+```sql
 SELECT emp_id, first_name, salary
 FROM employees
 WHERE salary > 50000;
@@ -28,7 +28,7 @@ WHERE salary > 50000;
 
 ### Example 2: Multiple Conditions Using AND/OR
 To filter employees older than 30 and earning more than 50,000
-```
+```sql
 SELECT emp_id, first_name, age, salary
 FROM employees
 WHERE age > 30 AND salary > 50000;
@@ -42,7 +42,7 @@ WHERE age > 30 AND salary > 50000;
 ### Purpose
 The HAVING clause is used to filter aggregated data after the `GROUP BY` clause is applied.
 ### Syntax
-```
+```sql
 SELECT column1, aggregate_function(column2)
 FROM table_name
 GROUP BY column1
@@ -51,7 +51,7 @@ HAVING condition;
 
 ### Example 1: Filtering Aggregated Data
 Find departments where the average salary is greater than 60,000
-```
+```sql
 SELECT department_name, AVG(salary) AS avg_salary
 FROM employees
 GROUP BY department_name
@@ -60,7 +60,7 @@ HAVING AVG(salary) > 60000;
 
 ### Example 2: Combining Aggregates with HAVING
 Find departments where the total salary exceeds 150,000
-```
+```sql
 SELECT department_name, SUM(salary) AS total_salary
 FROM employees
 GROUP BY department_name
@@ -86,7 +86,7 @@ In many queries, both WHERE and HAVING can be used together to filter data at di
 Find departments where:
 * Employees earning below 40,000 are excluded.
 * Total salary for the remaining employees exceeds 150,000.
-```
+```sql
 SELECT department_name, SUM(salary) AS total_salary
 FROM employees
 WHERE salary > 40000
@@ -101,14 +101,14 @@ HAVING SUM(salary) > 150000;
 ## 6. Common Mistakes to Avoid
 ### 1. Using Aggregate Functions in WHERE Clause
 Aggregate functions like `SUM` or `AVG` cannot be used in the WHERE clause. This will throw an error:
-```
+```sql
 SELECT department_name
 FROM employees
 WHERE SUM(salary) > 150000; -- Incorrect
 ```
 
 Instead, use the HAVING clause:
-```
+```sql
 SELECT department_name, SUM(salary) AS total_salary
 FROM employees
 GROUP BY department_name
@@ -117,7 +117,7 @@ HAVING SUM(salary) > 150000;
 
 ### 2. Using HAVING Without GROUP BY
 Although HAVING can work without GROUP BY, it's rarely meaningful:
-```
+```sql
 SELECT sum(salary)
 FROM employees
 HAVING sum(salary) > 50000; -- Technically valid but not recommended

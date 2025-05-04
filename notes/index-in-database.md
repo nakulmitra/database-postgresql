@@ -31,7 +31,7 @@ Let's break this down using PostgreSQL.
 
 ### Scenario 1: Without Index - Sequential Scan (Seq Scan)
 
-```
+```sql
 SELECT * FROM employees WHERE full_name = 'dev';
 ```
 
@@ -52,7 +52,7 @@ SELECT * FROM employees WHERE full_name = 'dev';
 
 - PostgreSQL scanned **all 5 crore rows** (with parallel workers), even though the result had 1 matches.
 
-```
+```sql
 explain analyze select * from demo.employees
 where full_name = 'dev';
 ```
@@ -91,7 +91,7 @@ where full_name = 'dev';
 
 ### Scenario 2: With Index - Index Scan (and Heap Fetch)
 
-```
+```sql
 CREATE INDEX idx_full_name ON employees(full_name);
 SELECT * FROM employees WHERE full_name = 'dev';
 ```
@@ -111,7 +111,7 @@ SELECT * FROM employees WHERE full_name = 'dev';
 #### Index Scan Execution Plan
 ![Index Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/Index_Scan_Query_Planner.png)
 
-```
+```sql
 explain analyze select * from demo.employees
 where full_name = 'dev';
 ```
@@ -159,12 +159,12 @@ where full_name = 'dev';
 
 ## How to Create Indexes
 ### Single Column Index
-```
+```sql
 CREATE INDEX idx_full_name ON employees(full_name);
 ```
 
 ### Multi-Column Index
-```
+```sql
 CREATE INDEX idx_dept_salary ON employees(dept_id, salary);
 ```
 
