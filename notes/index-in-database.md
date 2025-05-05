@@ -3,6 +3,8 @@
 ## Overview
 In databases, performance is everything - especially when dealing with large volumes of data. An **Index** is a powerful tool that allows databases to **quickly locate and access data** without scanning every row in a table.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/whHvqayU38c)](https://youtu.be/whHvqayU38c)
+
 ## What is an Index?
 An **Index** is a **data structure** that helps the database **find rows faster**, similar to the index at the back of a book. Instead of reading through every page to find a topic, you go to the index and directly jump to the correct page.
 
