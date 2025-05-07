@@ -1,4 +1,4 @@
-# PostgreSQL Tutorial - Why PostgreSQL Uses Sequential Scan Even If Index Exists
+# Why PostgreSQL Uses Sequential Scan Even If Index Exists
 
 PostgreSQL is known for its intelligent and cost-based query planner. However, many developers are surprised when PostgreSQL performs a **Sequential Scan (Seq Scan)** even though an index exists on the filtered column. Understanding why this happens is essential for effective **query performance tuning** and **indexing strategy**.
 
