@@ -38,6 +38,7 @@ from foundational database concepts to advanced features.
 - [Window Functions in SQL](notes/window-functions.md)
 - [Subqueries in SQL](notes/subqueries.md)
 - [What is an Index in a Database?](notes/index-in-database.md)
+- [Why PostgreSQL Uses Sequential Scan Even If Index Exists](notes/sequentialScanOverIndexScan.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
