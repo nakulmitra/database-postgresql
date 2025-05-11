@@ -91,7 +91,8 @@ where full_name = 'dev';
    - In this case, it might have been executed **before** the index was created.
    - Or PostgreSQL's planner estimated that the cost of the index wasn't worth it (if data was too uniform or stats were outdated).
 
-> To understand the flow of Sequential Scan, please refer the link:
+
+> **Important:** To understand the flow of Sequential Scan, please refer the link:
 > [Sequential Scan Flow Dig](https://github.com/nakulmitra/database-postgresql/blob/master/flowDig/seqScan.md)
 
 
@@ -151,7 +152,8 @@ where full_name = 'dev';
    - **Actual Rows Returned**: 1
    - Very fast due to minimal disk I/O.
 
-> To understand the flow of Index Scan, please refer the link:
+
+> **Important:** To understand the flow of Index Scan, please refer the link:
 > [Index Scan Flow Dig](https://github.com/nakulmitra/database-postgresql/blob/master/flowDig/indexScan.md)
 
 
