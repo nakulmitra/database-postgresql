@@ -2,6 +2,8 @@
 
 PostgreSQL is known for its intelligent and cost-based query planner. However, many developers are surprised when PostgreSQL performs a **Sequential Scan (Seq Scan)** even though an index exists on the filtered column. Understanding why this happens is essential for effective **query performance tuning** and **indexing strategy**.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/A0Z8igAwwdI)](https://youtu.be/A0Z8igAwwdI)
+
 ## 1. What is a Sequential Scan?
 
 A **Sequential Scan** (also called `Seq Scan`) is the most basic method PostgreSQL uses to read data. It reads the entire table row by row, even if there is a WHERE clause.
