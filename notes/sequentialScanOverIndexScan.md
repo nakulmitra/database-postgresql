@@ -47,7 +47,7 @@ If `dept_id = 3` matches millions of rows, a sequential scan might be faster.
 
 For small tables, the entire table can fit in memory or be scanned quickly. In such cases, the planner prefers a Seq Scan as it’s simpler and faster.
 
-### c. Stale or Missing Statistics
+### c. Missing Statistics
 
 PostgreSQL relies on **table statistics** to make planning decisions. If stats are outdated, it may **misestimate** the number of matching rows.
 
@@ -91,7 +91,7 @@ Even though the `dept_id` column is indexed, PostgreSQL chooses a **Parallel Seq
 
 Let's break down why and what the execution plan reveals
 
-### Screenshot 1: Query Execution Plan (Execution Time = 8653 ms)
+### Screenshot 1: Query Execution Plan without Index (Execution Time = 8653 ms)
 ![Sequential Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/Sequential_Scan_Query_Planner_1.png)
 
 Key Highlights:
@@ -108,7 +108,7 @@ Key Highlights:
 * **Execution Time: \~8653 ms**
   The query took over 8.5 seconds to execute.
 
-### Screenshot 2: Same Query After Some Optimizations (Execution Time = 7156 ms)
+### Screenshot 2: Same Query After Index creation (Execution Time = 7156 ms)
 ![Sequential Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/Index_Scan_Query_Planner_1.png)
 
 This screenshot is from the same query, after creating the index.
