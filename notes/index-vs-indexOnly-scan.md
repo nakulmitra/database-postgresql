@@ -2,6 +2,8 @@
 
 Optimizing query performance is essential for working with large datasets in PostgreSQL. Two closely related access methods play a vital role in speeding up SELECT queries: **Index Scan** and **Index-Only Scan**. Understanding their differences and how PostgreSQL chooses between them is key to efficient database design.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/ZxqfSDND5bg)](https://youtu.be/ZxqfSDND5bg)
+
 ## What is an Index Scan?
 
 An **Index Scan** is a method PostgreSQL uses when it needs to:
