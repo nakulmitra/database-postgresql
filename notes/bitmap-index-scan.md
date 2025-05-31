@@ -1,4 +1,4 @@
-# Bitmap Index Scan in PostgreSQL - Complete Theory with Real Query Plan
+# Bitmap Index Scan in PostgreSQL
 
 PostgreSQL offers multiple access methods to retrieve rows efficiently based on the query and data distribution. One such powerful and often misunderstood mechanism is the **Bitmap Index Scan**.
 
