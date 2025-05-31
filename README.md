@@ -12,6 +12,7 @@ from foundational database concepts to advanced features.
 - [Sequential Scan](flowDig/seqScan.md)
 - [Index Scan](flowDig/indexScan.md)
 - [Index Only Scan](flowDig/indexOnlyScan.md)
+- [Bitmap Index Scan](flowDig/bitMapIndexScan.md)
 
 ## Notes 
 - [Introduction to Databases and Why PostgreSQL Stands Out](notes/introduction-to-databases.md)
