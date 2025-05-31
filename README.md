@@ -42,6 +42,7 @@ from foundational database concepts to advanced features.
 - [Why PostgreSQL Uses Sequential Scan Even If Index Exists](notes/sequentialScanOverIndexScan.md)
 - [Why PostgreSQL Uses Sequential Scan Even If Index Exists](notes/sequentialScanOverIndexScan.md)
 - [PostgreSQL Index Scan vs Index-Only Scan](notes/index-vs-indexOnly-scan.md)
+- [Bitmap Index Scan in PostgreSQL](notes/bitmap-index-scan.md)
 
 ## YouTube playlists
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
