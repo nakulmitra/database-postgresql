@@ -1,14 +1,6 @@
-# 📘 Bitmap Index Scan in PostgreSQL - Complete Theory with Real Query Plan
+# Bitmap Index Scan in PostgreSQL - Complete Theory with Real Query Plan
 
 PostgreSQL offers multiple access methods to retrieve rows efficiently based on the query and data distribution. One such powerful and often misunderstood mechanism is the **Bitmap Index Scan**.
-
-In this tutorial, we will explore:
-
-* What a Bitmap Index Scan is
-* How it's different from a traditional Index Scan
-* When PostgreSQL uses it
-* Real-world examples and query plans
-* Performance insights
 
 ## What is a Bitmap Index Scan?
 
@@ -53,26 +45,7 @@ PostgreSQL uses:
 
 ## Query Plan Breakdown
 
-> ![Bitmap Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/BitMap_Index_Scan.png)
-
-Here's the actual query execution plan:
-
-```
-Bitmap Heap Scan on employees
-  Recheck Cond: ((full_name = 'Employee_234') OR (salary = 70064.00))
-  Heap Blocks: exact=864
-  Buffers: shared hit=8 read=866
-  ->  BitmapOr
-        Buffers: shared hit=5 read=5
-        ->  Bitmap Index Scan on idx_full_name_salary
-              Index Cond: (full_name = 'Employee_234')
-              Buffers: shared hit=4
-        ->  Bitmap Index Scan on idx_salary
-              Index Cond: (salary = 70064.00)
-              Buffers: shared hit=1 read=5
-Planning Time: 0.144 ms
-Execution Time: 35.420 ms
-```
+![Bitmap Scan Query Planner](https://github.com/nakulmitra/database-postgresql/blob/master/notes/images/BitMap_Index_Scan.png)
 
 ### Breakdown:
 
@@ -125,9 +98,7 @@ PostgreSQL automatically switches to Bitmap Index Scan when:
 
 ## Summary
 
-Bitmap Index Scans are a **smart hybrid mechanism** in PostgreSQL:
-
-They combine the **precision of Index Scans** and the **efficiency of Sequential Scans** through bitmap logic and batch heap access.
+Bitmap Index Scans are a **smart hybrid mechanism** in PostgreSQL. They combine the **precision of Index Scans** and the **efficiency of Sequential Scans** through bitmap logic and batch heap access.
 
 ### Key Advantages:
 
