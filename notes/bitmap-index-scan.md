@@ -2,6 +2,8 @@
 
 PostgreSQL offers multiple access methods to retrieve rows efficiently based on the query and data distribution. One such powerful and often misunderstood mechanism is the **Bitmap Index Scan**.
 
+[![](https://markdown-videos-api.jorgenkh.no/youtube/ew49CGzwXgs)](https://youtu.be/ew49CGzwXgs)
+
 ## What is a Bitmap Index Scan?
 
 A **Bitmap Index Scan** is an advanced query execution strategy used by PostgreSQL when:
