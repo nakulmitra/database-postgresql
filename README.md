@@ -45,10 +45,10 @@ from foundational database concepts to advanced features.
 - [Bitmap Index Scan in PostgreSQL](notes/bitmap-index-scan.md)
 
 ## YouTube playlists
+* [Linux tutorial series for software developers](https://www.youtube.com/playlist?list=PLKrxcqbQdCgbR2s0wxze6WE_OW07u_yJ8)
 * [Java Tutorial Series](https://www.youtube.com/playlist?list=PLKrxcqbQdCgZDkAiCs6uGFK7yzhFkjNJU)
 * [Object-Oriented Programming (OOP) in Java](https://www.youtube.com/playlist?list=PLKrxcqbQdCgbF2t_O8w2Kjx0R7qYTA2XB)
 * [Real-World Projects with OOP Concepts](https://www.youtube.com/playlist?list=PLKrxcqbQdCgaAtUObt11xA63eO7kx4Epj)
-* [Linux tutorial series for software developers](https://www.youtube.com/playlist?list=PLKrxcqbQdCgbR2s0wxze6WE_OW07u_yJ8)
 
 ## Stay Connected
 * [Dev Portal](https://www.youtube.com/@DevPortal2114)
