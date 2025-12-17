@@ -1,5 +1,5 @@
 # Databases with PostgreSQL
-Welcome to the Databases with PostgreSQL tutorial series repository!
+Welcome to the [Databases with PostgreSQL](https://www.youtube.com/playlist?list=PLKrxcqbQdCga1o3NbaommIaQmqDJ_Y3Vo) tutorial series repository!
 
 This repository contains all the resources, scripts, and examples from the tutorial series aimed at helping you master PostgreSQL 
 from foundational database concepts to advanced features.
