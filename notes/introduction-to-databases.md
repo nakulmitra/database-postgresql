@@ -1,9 +1,7 @@
 # Introduction to Databases and Why PostgreSQL Stands Out
 
 ## What is a Database?
-A database is a digital system that organizes, stores, and manages data in a way that ensures consistency, security, and scalability. It serves as the backbone of most modern applications.
-
-A database is a structured way to store and manage data electronically. Think of it as a digital filing system where data can be easily stored, retrieved, and manipulated.
+A database is a digital system that organizes, stores, and manages data in a way that ensures consistency, security, and scalability. It serves as the backbone of most modern applications. It is a structured way to store and manage data electronically. Think of it as a digital filing system where data can be easily stored, retrieved, and manipulated.
 
 Databases are foundational to modern applications, enabling efficient data management at scale. Here are some examples of databases in the real world:
 * `Hospital Management System:` Keeps track of patient records, doctor schedules, and billing details.
